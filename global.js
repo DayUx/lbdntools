@@ -40,36 +40,49 @@ function zoom() {
 };
 
 function addLegendElement(choice) {
-
-    var iframe = document.createElement("div");
+    document.getElementById("add-module-menu").classList.toggle("change");
+    var iframe = document.createElement("iframe");
     var i;
-    iframe.id = choice;
-    iframe.classList.add("legend-content");
+    iframe.src = "legend/" + choice + ".html";
+    
     iframe.classList.add("players");
     iframe.classList.add(pointID + "");
     iframe.classList.add(choice);
-    
+
     var div = document.createElement("div");
-    
-    pointID = pointID + 1;
+
+
 
     div.classList.add("draggable");
     div.classList.add(pointID + "");
     div.style.top = '50%';
     div.style.left = '50%';
 
-
-
-    document.getElementById("legende").appendChild(iframe);
-    document.getElementById("map").appendChild(div);
+        var div2 = document.createElement("div");
+    div2.id = choice + pointID;
+    div2.classList.add(pointID + "");
+    div2.classList.add("legend-content");
     
-    $( "#" + choice ).load( "legend/infantry.html" );
+    var close = document.createElement("button");
+    close.classList.add("delete");
+    close.setAttribute('onclick','supprimer(this)');
+    close.classList.add(pointID + "");
+
+    document.getElementById("legende").appendChild(div2);
+    document.getElementById(choice + pointID).appendChild(iframe);
+    document.getElementById(choice + pointID).appendChild(close);
+    document.getElementById("map").appendChild(div);
+
+    $("#" + choice).load("legend/infantry.html");
     draggableElements = document.getElementsByClassName("draggable");
     var draggableElements = document.getElementsByClassName("draggable");
-
+    pointID = pointID + 1;
     for (i = 0; i < draggableElements.length; i++) {
         dragElement(draggableElements[i]);
     }
 
 };
+function addModuleMenu(){
+        document.getElementById("add-module-menu").classList.toggle("change");
 
+};

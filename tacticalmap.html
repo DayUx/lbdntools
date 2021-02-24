@@ -33,10 +33,17 @@
             </div>
         </div>
         <div class=element-div id=legende>
-            <button onclick="addLegendElement('infantry')" class=legend-content id=add-module>
-                <div class=frame>+</div>
-                <div>Ajouter un élément</div>
-            </button>
+            <div class="add-module-div">
+                <button onclick="addModuleMenu()" id=add-module>
+                    <div class=frame>+</div>
+                    <div>Ajouter un élément</div>
+                </button>
+                <div id=add-module-menu>
+                    <button class=add-module-button onclick="addLegendElement('infantry')">Infanterie</button>
+                    <button class=add-module-button onclick="addLegendElement('infantry')">Mg</button>
+                    <button class=add-module-button onclick="addLegendElement('infantry')">Tank</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -68,7 +75,7 @@
             } else {
                 elmnt.onmousedown = dragMouseDown;
             }
-            
+
 
             function dragMouseDown(e) {
                 e = e || window.event;
@@ -117,7 +124,12 @@
             }
         };
     </script>
-    
+    <script>
+        function supprimer(obj) {
+            console.log(obj.classList[1]);
+            $("." + obj.classList[1]).remove();
+        }
+    </script>
 
 
 </body>
