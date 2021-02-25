@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <div id="nameOfElement"></div>
     <div class=container>
         <div class=element-div id=map-container>
             <div class="dropdown">
@@ -40,8 +41,9 @@
                 </button>
                 <div id=add-module-menu>
                     <button class=add-module-button onclick="addLegendElement('infantry')">Infanterie</button>
-                    <button class=add-module-button onclick="addLegendElement('infantry')">Mg</button>
+                    <button class=add-module-button onclick="addLegendElement('mg')">Mg</button>
                     <button class=add-module-button onclick="addLegendElement('tank')">Tank</button>
+                    <button class=add-module-button onclick="addLegendElement('mortar')">Mortar</button>
                 </div>
             </div>
         </div>
@@ -126,6 +128,7 @@
     </script>
     <script>
         function supprimer(obj) {
+            console.log("." + obj.classList[1]);
             $("." + obj.classList[1]).remove();
         };
 

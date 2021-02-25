@@ -110,24 +110,24 @@ button {
     opacity: 1;
 }
 
-.dropdown:hover{
-        opacity: 1;
+.dropdown:hover {
+    opacity: 1;
 
 }
 
 .dropdown-content button {
-    
+
     width: 100%;
     opacity: 0.7;
     background: rgb(49, 49, 49);
     border: solid 1px #fff;
     color: #fff;
     padding: 5px;
-    
+
 }
 
 .dropdown-content button:hover {
-        opacity: 1;
+    opacity: 1;
 
 }
 
@@ -160,20 +160,20 @@ button {
 }
 
 .zoom button {
-    
+
     opacity: 0.7;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    
+
     background: rgb(49, 49, 49);
     font-size: 20px;
-    border: solid 1px ;
+    border: solid 1px;
     transition: 0.5s all;
     color: #fff;
     height: 30px;
-    width:30px;
+    width: 30px;
 }
 
 .zoom button:hover {
@@ -250,26 +250,52 @@ li {
     top: 0;
     height: 5%;
     width: 5%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
-.icon.infantry,.icon.tank{
+.icon.infantry,
+.icon.tank,
+.icon.mg,
+.icon.mortar {
     height: 50px;
     width: 50px;
 }
-.infantry{
+
+.infantry {
     background-color: blue;
     -webkit-mask: url(img/infantry.svg) no-repeat center;
     mask: url(img/infantry.svg) no-repeat center;
 }
-.infantry.change{
-    background-color: red;
-}
-.tank.change{
+
+.infantry.change {
     background-color: red;
 }
 
-.tank{
+.mortar {
+    background-color: blue;
+    -webkit-mask: url(img/mortar.svg) no-repeat center;
+    mask: url(img/mortar.svg) no-repeat center;
+}
+
+.mortar.change {
+    background-color: red;
+}
+
+.mg {
+    background-color: blue;
+    -webkit-mask: url(img/mg.svg) no-repeat center;
+    mask: url(img/mg.svg) no-repeat center;
+}
+
+.mg.change {
+    background-color: red;
+}
+
+.tank.change {
+    background-color: red;
+}
+
+.tank {
     background-color: blue;
     -webkit-mask: url(img/tank.svg) no-repeat center;
     mask: url(img/tank.svg) no-repeat center;
@@ -281,10 +307,11 @@ li {
 .draggable:hover {
     cursor: move;
 }
-#legende{
+
+#legende {
     height: 100vh;
     min-width: 330px;
-    background: rgb(49,49,49);
+    background: rgb(49, 49, 49);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -292,23 +319,27 @@ li {
     overflow-y: scroll;
 
 }
-.container{
-    width:calc(100vw-70px);
+
+.container {
+    width: calc(100vw-70px);
     height: 100%;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.element-div{
+
+.element-div {
     height: 100%;
 }
-#map-container{
-        overflow: scroll;
-    width: calc(100vw  - 400px);
+
+#map-container {
+    overflow: scroll;
+    width: calc(100vw - 400px);
 
 }
-#add-module{
+
+#add-module {
     margin-top: 30px;
     margin-bottom: 20px;
     font-weight: 500;
@@ -322,77 +353,89 @@ li {
     color: #fff;
     opacity: 0.7;
 }
-#add-module:hover{
-            opacity: 1;
+
+#add-module:hover {
+    opacity: 1;
 
 }
 
-.add-module-div{
-    z-index:1000;
+.add-module-div {
+    position: relative;
+    z-index: 1000;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#add-module-menu{
+#add-module-menu {
     display: none;
-    
-    min-width:100px; 
+    position: absolute;
+    top: 100%;
+    min-width: 100px;
     border: solid 1px #fff;
     margin-bottom: 20px;
     margin-top: 0px;
+    background: rgb(49, 49, 49);
 }
-#add-module-menu.change{
-    display:flex;
+
+#add-module-menu.change {
+    display: flex;
     flex-direction: column;
 }
-.add-module-button{
+
+.add-module-button {
     color: #fff;
     background: transparent;
-    border:none;
+    border: none;
     padding: 5px;
     transition: 0.2s all;
 }
-.add-module-button:hover{
-    background: rgb(39,39,39);
+
+.add-module-button:hover {
+    background: rgb(39, 39, 39);
 }
 
 
 
-button:hover{
+button:hover {
 
-    cursor:pointer;
+    cursor: pointer;
 }
-.legend-content{
-    z-index:0;
+
+.legend-content {
+    z-index: 0;
     margin-top: 20px;
-    height: 100px;
+    min-height: 100px;
     width: 250px;
     position: relative;
+    border: solid 1px #fff;
+    padding: 5px;
 }
 
-.frame{
+.frame {
     margin-right: 10px;
-    font-size:20px;
+    font-size: 20px;
     padding-left: 6px;
     padding-right: 6px;
-    border:solid 1px #fff;
+    border: solid 1px #fff;
 }
 
-.delete{
-    width:25px;
-    height:25px;
+.delete {
+    width: 25px;
+    height: 25px;
     background: url(img/cross-close-svgrepo-com.svg);
     background-size: cover;
     position: absolute;
-    bottom:0px;
-    right: 0px;
-    border:solid 1px #fff;
+    bottom: 5px;
+    right: 5px;
+    border: solid 1px #fff;
     opacity: 0.7;
 }
-.delete:hover{
+
+.delete:hover {
     opacity: 1;
 }
+
 iframe {
     height: 100%;
     width: 100%;
@@ -401,7 +444,73 @@ iframe {
 }
 
 
-.buttonTeam{
+.buttonTeam {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background: transparent;
+    color: #fff;
+    border: solid 1px #fff;
+    opacity: 0.7;
+
+}
+
+
+.inputName {
+
+    background: transparent;
+    color: #fff;
+    border: solid 1px #fff;
+    opacity: 0.7;
+    border-radius: 0px;
+    width: 70%;
+    text-align: right;
+}
+
+
+
+.inputName:hover {
+    opacity: 1;
+}
+
+.divInput{
+    display: flex;
     
+    position: absolute;
+    right: 5px;
+    width: 70%;
+}
+
+.okInput{
+    background: transparent;
+    color: #fff;
+    border: solid 1px #fff;
+    opacity: 0.7;
+}
+.okInput:hover{
+    opacity: 1;
+}
+
+.buttonTeam:hover {
+    opacity: 1;
+}
+.nameInput{
+    min-width: 50px;
+    border: solid 1px #fff;
+    opacity: 0.7;
+}
+
+#nameOfElement {
+    display: none;
+    pointer-events: none;
+    position: absolute;
+    transform: translate(-50%, -200%);
+    background: rgb(49,49,49);
+    padding: 5px;
+    border: solid 1px #fff;
+    z-index: 100000;
+}
+#nameOfElement.change {
+    display: block;
     
 }
