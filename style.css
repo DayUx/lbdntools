@@ -248,12 +248,35 @@ li {
 .draggable {
     position: absolute;
     top: 0;
-    height: 50px;
-    width: 50px;
-    background: url("img/innfantry.svg");
-    background-size: cover;
+    height: 5%;
+    width: 5%;
     transform: translate(-50%,-50%);
 }
+
+.icon.infantry,.icon.tank{
+    height: 50px;
+    width: 50px;
+}
+.infantry{
+    background-color: blue;
+    -webkit-mask: url(img/infantry.svg) no-repeat center;
+    mask: url(img/infantry.svg) no-repeat center;
+}
+.infantry.change{
+    background-color: red;
+}
+.tank.change{
+    background-color: red;
+}
+
+.tank{
+    background-color: blue;
+    -webkit-mask: url(img/tank.svg) no-repeat center;
+    mask: url(img/tank.svg) no-repeat center;
+}
+
+
+
 
 .draggable:hover {
     cursor: move;
@@ -375,4 +398,10 @@ iframe {
     width: 100%;
     border: solid 1px #fff;
     padding: 5px;
+}
+
+
+.buttonTeam{
+    
+    
 }

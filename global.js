@@ -41,20 +41,28 @@ function zoom() {
 
 function addLegendElement(choice) {
     document.getElementById("add-module-menu").classList.toggle("change");
-    var iframe = document.createElement("iframe");
+    var iframe = document.createElement("div");
     var i;
-    iframe.src = "legend/" + choice + ".html";
     
-    iframe.classList.add("players");
+    iframe.classList.add("icon");
     iframe.classList.add(pointID + "");
     iframe.classList.add(choice);
-
+    
+    
+    var buttonTeam = document.createElement("button");
+    buttonTeam.setAttribute('onClick','changeTeam(this)');
+    buttonTeam.classList.add(pointID + '');
+    buttonTeam.classList.add('buttonTeam');
+    buttonTeam.textContent = "Allié";
+    buttonTeam.id = choice;
     var div = document.createElement("div");
 
 
 
     div.classList.add("draggable");
     div.classList.add(pointID + "");
+        div.classList.add(choice);
+
     div.style.top = '50%';
     div.style.left = '50%';
 
@@ -71,9 +79,10 @@ function addLegendElement(choice) {
     document.getElementById("legende").appendChild(div2);
     document.getElementById(choice + pointID).appendChild(iframe);
     document.getElementById(choice + pointID).appendChild(close);
+    document.getElementById(choice + pointID).appendChild(buttonTeam);
+    
     document.getElementById("map").appendChild(div);
 
-    $("#" + choice).load("legend/infantry.html");
     draggableElements = document.getElementsByClassName("draggable");
     var draggableElements = document.getElementsByClassName("draggable");
     pointID = pointID + 1;
@@ -86,3 +95,4 @@ function addModuleMenu(){
         document.getElementById("add-module-menu").classList.toggle("change");
 
 };
+
