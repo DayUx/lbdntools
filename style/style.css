@@ -134,7 +134,7 @@ button {
 #map {
     width: 1000px;
     height: 1000px;
-    background-image: url(img/marigny.png);
+    background-image: url("../img/marigny.png");
     background-size: cover;
     background-repeat: no-repeat;
     /*margin-left: 50%;
@@ -261,51 +261,51 @@ li {
 }
 
 .infantry {
-    background: url(img/infantry.png);
+    background: url("../img/infantry.png");
     background-size: cover;
 
 }
 
 .infantry.change {
-    background: url(img/infantryEn.png);
+    background: url("../img/infantryEn.png");
     background-size: cover;
 
 }
 
 .mortar {
 
-    background: url(img/mortar.png);
+    background: url("../img/mortar.png");
     background-size: cover;
 
 }
 
 .mortar.change {
-    background: url(img/mortarEn.png);
+    background: url("../img/mortarEn.png");
     background-size: cover;
 
 }
 
 .mg {
-    background: url(img/mg.png);
+    background: url("../img/mg.png");
     background-size: cover;
 
 
 }
 
 .mg.change {
-    background: url(img/mgEn.png);
+    background: url("../img/mgEn.png");
     background-size: cover;
 
 }
 
 .tank.change {
-    background: url(img/tankEn.png);
+    background: url("../img/tankEn.png");
     background-size: cover;
 
 }
 
 .tank {
-    background: url(img/tank.png);
+    background: url("../img/tank.png");
     background-size: cover;
 
 
@@ -433,7 +433,7 @@ button:hover {
 .delete {
     width: 25px;
     height: 25px;
-    background: url(img/cross-close-svgrepo-com.svg);
+    background: url("../img/cross-close-svgrepo-com.svg");
     background-size: cover;
     position: absolute;
     bottom: 5px;
@@ -542,7 +542,7 @@ iframe {
     overflow: hidden;
     border: none;
     background: rgb(49, 49, 49);
-    background: url(img/save.svg);
+    background: url("../img/save.svg");
     background-size: cover;
     opacity: 0.7;
 }
