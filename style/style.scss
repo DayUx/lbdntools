@@ -148,7 +148,7 @@ div.dropdown {
     overflow: hidden;
 }
 
-.zoom {
+div.zoom {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,29 +159,27 @@ div.dropdown {
     bottom: 20px;
     margin-left: 20px;
     overflow: hidden;
-}
 
-.zoom button {
+    button {
+        opacity: 0.7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
 
-    opacity: 0.7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+        background: getColor(fourth);
+        font-size: 20px;
+        border: solid 1px;
+        transition: 0.5s all;
+        color: #fff;
+        height: 30px;
+        width: 30px;
+    }
 
-    background: getColor(fourth);
-    font-size: 20px;
-    border: solid 1px;
-    transition: 0.5s all;
-    color: #fff;
-    height: 30px;
-    width: 30px;
-}
-
-.zoom button:hover {
-    cursor: pointer;
-    opacity: 1;
-
+    button:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
 }
 
 h1 {
@@ -199,7 +197,6 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .div-content {
@@ -210,7 +207,6 @@ h2 {
     flex-direction: column;
     height: 100vh
 }
-
 
 ul {
     text-align: left;
