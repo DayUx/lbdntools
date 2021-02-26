@@ -1,0 +1,41 @@
+// Thème clair
+$colors:(
+    first: #323BAC,
+    second: #FF4B5C,
+    third: #454545,
+    fourth: #E6E9EE,
+    white: #ffffff,
+    whiteBackground: #ffffff,
+    black: #000000,
+);
+
+// Thème sombre
+$colors-dark:(
+    first: #323BAC,
+    second: #FF4B5C,
+    third: #454545,
+    fourth: #313131,
+    white: #000000,
+    whiteBackground: #181818,
+    black: #ffffff,
+);
+
+:root {
+    @each $name, $color in $colors {
+        --color-#{$name}:#{$color};
+    };
+    --theme: "light";
+};
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        @each $name, $color in $colors-dark {
+            --color-#{$name}:#{$color};
+        }
+        --theme: "dark";
+    }
+}
+
+@function getColor($color-name) {
+    @return var(--color-#{$color-name});
+}
