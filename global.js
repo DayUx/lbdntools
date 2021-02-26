@@ -129,19 +129,21 @@ function addModuleMenu() {
 };
 
 function showName(obj) {
+
     document.getElementById("nameOfElement").classList.toggle("change");
     var name = obj.classList[1];
     document.getElementById("nameOfElement").textContent = name + "";
 };
 
 document.addEventListener('mousemove', function (e) {
-
-    var body = document.getElementById('map');
-    var circle = document.getElementById('nameOfElement');
-    var left = e.pageX;
-    var top = e.pageY;
-    circle.style.left = left + 'px';
-    circle.style.top = top + 'px';
+    if (document.getElementById('nameOfElement') !== null) {
+        var body = document.getElementById('map');
+        var circle = document.getElementById('nameOfElement');
+        var left = e.pageX;
+        var top = e.pageY;
+        circle.style.left = left + 'px';
+        circle.style.top = top + 'px';
+    }
 });
 
 
@@ -196,7 +198,7 @@ function downloadURI(uri, name) {
     link.href = uri;
     document.body.appendChild(link);
     link.click();
-    clearDynamicLink(link); 
+    clearDynamicLink(link);
 }
 
 function DownloadAsImage() {
@@ -211,10 +213,3 @@ function DownloadAsImage() {
     document.getElementById('map').style.height = height;
     document.getElementById('map').style.width = height;
 }
-
-
-html2canvas(element, {
-    onrendered: function(canvas) {
-        // handle the rendered canvas (screenshot) in here in anyway you like.
-    }
-});
