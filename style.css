@@ -139,8 +139,8 @@ button {
     background-image: url(img/marigny.png);
     background-size: cover;
     background-repeat: no-repeat;
-    margin-left: 50%;
-    transform: translate(-50%);
+    /*margin-left: 50%;
+    transform: translate(-50%);*/
     position: relative;
     z-index: 0;
     overflow: hidden;
@@ -251,6 +251,7 @@ li {
     height: 5%;
     width: 5%;
     transform: translate(-50%, -50%);
+    background-size: cover;
 }
 
 .icon.infantry,
@@ -262,43 +263,54 @@ li {
 }
 
 .infantry {
-    background-color: blue;
-    -webkit-mask: url(img/infantry.svg) no-repeat center;
-    mask: url(img/infantry.svg) no-repeat center;
+    background: url(img/infantry.png);
+        background-size: cover;
+
 }
 
 .infantry.change {
-    background-color: red;
+    background: url(img/infantryEn.png);
+        background-size: cover;
+
 }
 
 .mortar {
-    background-color: blue;
-    -webkit-mask: url(img/mortar.svg) no-repeat center;
-    mask: url(img/mortar.svg) no-repeat center;
+    
+    background: url(img/mortar.png);
+        background-size: cover;
+
 }
 
 .mortar.change {
-    background-color: red;
+    background: url(img/mortarEn.png);
+        background-size: cover;
+
 }
 
 .mg {
-    background-color: blue;
-    -webkit-mask: url(img/mg.svg) no-repeat center;
-    mask: url(img/mg.svg) no-repeat center;
+    background: url(img/mg.png);
+        background-size: cover;
+
+    
 }
 
 .mg.change {
-    background-color: red;
+    background: url(img/mgEn.png);
+        background-size: cover;
+
 }
 
 .tank.change {
-    background-color: red;
+    background:  url(img/tankEn.png);
+        background-size: cover;
+
 }
 
 .tank {
-    background-color: blue;
-    -webkit-mask: url(img/tank.svg) no-repeat center;
-    mask: url(img/tank.svg) no-repeat center;
+    background:  url(img/tank.png);
+        background-size: cover;
+
+    
 }
 
 
@@ -512,5 +524,33 @@ iframe {
 }
 #nameOfElement.change {
     display: block;
+    
+}
+#download{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000000;
+    padding: 0;
+    position: absolute;
+    left: 120px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border:none;
+    background: rgb(49,49,49);
+    background: url(img/save.svg);
+    background-size: cover;
+    opacity: 0.7;
+}
+
+
+#download:hover{
+        opacity: 1;
+
+}
+
+#previewImage{
     
 }

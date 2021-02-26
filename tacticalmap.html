@@ -25,6 +25,8 @@
 
                 </div>
             </div>
+            <button id=download onclick=DownloadAsImage()></button>
+            <div id=previewImage></div>
             <div class=zoom>
                 <button class=frame onclick="dezoom()">-</button><button class=frame onclick="zoom()">+</button>
             </div>
@@ -132,18 +134,18 @@
             $("." + obj.classList[1]).remove();
         };
 
-        function changeTeam(obj){
+        function changeTeam(obj) {
             if (obj.textContent === 'Allié') {
                 obj.textContent = 'Ennemi';
             } else {
                 obj.textContent = 'Allié';
             }
-            
-            
+
+
             var class1 = obj.classList[0];
-            
-            
-            
+
+
+
             var elems = document.getElementsByClassName(class1 + " " + obj.id);
             console.log(elems);
             for (var i = 0; i < elems.length; i++) {
@@ -151,7 +153,8 @@
             }
         }
     </script>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js">
+    </script>
+    
 
 </body>

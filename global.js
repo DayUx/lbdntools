@@ -77,6 +77,7 @@ function addLegendElement(choice) {
     var inputName = document.createElement("input");
     inputName.classList.add(pointID + '');
     inputName.classList.add('inputName');
+    inputName.setAttribute('onblur', 'resetValue(this)');
     inputName.value = pointID;
 
     var div = document.createElement("div");
@@ -147,22 +148,73 @@ document.addEventListener('mousemove', function (e) {
 
 function submit(obj) {
     var class1 = obj.classList[0];
-     
 
-    var input = document.getElementsByClassName( "inputName " + class1);
+
+    var input = document.getElementsByClassName("inputName " + class1);
     var newclass = input[0].value;
     newclass = newclass.replace(/\s/g, '');
-    var j = 1;
-    while (typeof document.getElementsByClassName(class1 + "") !== 'undefined' && document.getElementsByClassName(newclass + "").length > 0) {
-        newclass = newclass + "(" + j +")";
-    }
-    input[0].value = newclass +"";
-    var elems = document.getElementsByClassName(class1 + "");
-    console.log(elems);
-    var x = elems.length;
-    while (elems !== 'undefined' && elems.length > 0) {
-        console.log(i);
-        console.log(elems);
-        elems[0].className = elems[0].className.replace(class1 + "", newclass + "");
+    if (class1 === newclass) {
+
+    } else {
+        if (typeof document.getElementsByClassName(class1 + "") !== 'undefined' && document.getElementsByClassName(newclass + "").length > 0) {
+            erreur("Ce nom est déja utilisé");
+            input[0].value = class1 + "";
+
+        } else {
+            input[0].value = newclass + "";
+            var elems = document.getElementsByClassName(class1 + "");
+            console.log(elems);
+            var x = elems.length;
+            while (elems !== 'undefined' && elems.length > 0) {
+                console.log(i);
+                console.log(elems);
+                elems[0].className = elems[0].className.replace(class1 + "", newclass + "");
+            }
+        }
     }
 }
+
+function erreur(content) {
+    alert(content);
+}
+
+function resetValue(obj) {
+    window.setTimeout(function () {
+        resetValue2(obj);
+    }, 100);
+
+}
+
+function resetValue2(obj) {
+    obj.value = obj.classList[0];
+}
+
+function downloadURI(uri, name) {
+    var link = document.createElement("a");
+
+    link.download = name;
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();
+    clearDynamicLink(link); 
+}
+
+function DownloadAsImage() {
+    var height = document.getElementById('map').style.height;
+    document.getElementById('map').style.height = '100vh';
+    document.getElementById('map').style.width = '100vh';
+    var element = $("#map")[0];
+    html2canvas(element).then(function (canvas) {
+        var myImage = canvas.toDataURL();
+        downloadURI(myImage, "carte_strategique_lbdn.png");
+    });
+    document.getElementById('map').style.height = height;
+    document.getElementById('map').style.width = height;
+}
+
+
+html2canvas(element, {
+    onrendered: function(canvas) {
+        // handle the rendered canvas (screenshot) in here in anyway you like.
+    }
+});
