@@ -1,6 +1,4 @@
 body {
-
-
     background: rgb(69, 69, 69);
     margin: 0;
     width: 100vw;
@@ -264,53 +262,53 @@ li {
 
 .infantry {
     background: url(img/infantry.png);
-        background-size: cover;
+    background-size: cover;
 
 }
 
 .infantry.change {
     background: url(img/infantryEn.png);
-        background-size: cover;
+    background-size: cover;
 
 }
 
 .mortar {
-    
+
     background: url(img/mortar.png);
-        background-size: cover;
+    background-size: cover;
 
 }
 
 .mortar.change {
     background: url(img/mortarEn.png);
-        background-size: cover;
+    background-size: cover;
 
 }
 
 .mg {
     background: url(img/mg.png);
-        background-size: cover;
+    background-size: cover;
 
-    
+
 }
 
 .mg.change {
     background: url(img/mgEn.png);
-        background-size: cover;
+    background-size: cover;
 
 }
 
 .tank.change {
-    background:  url(img/tankEn.png);
-        background-size: cover;
+    background: url(img/tankEn.png);
+    background-size: cover;
 
 }
 
 .tank {
-    background:  url(img/tank.png);
-        background-size: cover;
+    background: url(img/tank.png);
+    background-size: cover;
 
-    
+
 }
 
 
@@ -485,28 +483,30 @@ iframe {
     opacity: 1;
 }
 
-.divInput{
+.divInput {
     display: flex;
-    
+
     position: absolute;
     right: 5px;
     width: 70%;
 }
 
-.okInput{
+.okInput {
     background: transparent;
     color: #fff;
     border: solid 1px #fff;
     opacity: 0.7;
 }
-.okInput:hover{
+
+.okInput:hover {
     opacity: 1;
 }
 
 .buttonTeam:hover {
     opacity: 1;
 }
-.nameInput{
+
+.nameInput {
     min-width: 50px;
     border: solid 1px #fff;
     opacity: 0.7;
@@ -517,16 +517,18 @@ iframe {
     pointer-events: none;
     position: absolute;
     transform: translate(-50%, -200%);
-    background: rgb(49,49,49);
+    background: rgb(49, 49, 49);
     padding: 5px;
     border: solid 1px #fff;
     z-index: 100000;
 }
+
 #nameOfElement.change {
     display: block;
-    
+
 }
-#download{
+
+#download {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -538,19 +540,17 @@ iframe {
     width: 30px;
     height: 30px;
     overflow: hidden;
-    border:none;
-    background: rgb(49,49,49);
+    border: none;
+    background: rgb(49, 49, 49);
     background: url(img/save.svg);
     background-size: cover;
     opacity: 0.7;
 }
 
 
-#download:hover{
-        opacity: 1;
+#download:hover {
+    opacity: 1;
 
 }
 
-#previewImage{
-    
-}
+#previewImage {}
