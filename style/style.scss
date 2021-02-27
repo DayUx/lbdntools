@@ -84,59 +84,92 @@ div#content {
     color: #fff;
 }
 
-div.dropdown {
-    z-index: 1;
+div.top-left {
     margin-left: 20px;
     margin-top: 20px;
     position: absolute;
+    width: 10%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    display: inline-block;
-    background: getColor(fourth);
-    padding: 5px;
-    border: solid 1px #fff;
-    opacity: 0.7;
+    justify-content: space-between;
 
-    img {
-        width: 10px;
-        margin-left: 20px;
-    }
-
-    .dropdown-content {
-
-        display: none;
-        position: absolute;
-        left: calc(0% - 1px);
-        top: 100%;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        overflow: hidden;
-    }
-
-    &:hover .dropdown-content {
-        display: block;
-        opacity: 1;
-    }
-
-    &:hover {
-        opacity: 1;
-
-    }
-
-    .dropdown-content button {
-
-        width: 100%;
-        opacity: 0.7;
+    div.dropdown {
+        z-index: 1;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: inline-block;
         background: getColor(fourth);
-        border: solid 1px #fff;
-        color: #fff;
         padding: 5px;
+        border: solid 1px #fff;
+        opacity: 0.7;
+        transition: 0.5s all;
 
+        div.inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            img {
+                width: 10px;
+                margin-left: 20px;
+            }             
+        }
+
+        .dropdown-content {
+            /*display: none;*/
+            position: absolute;
+            width: calc(60% + 1px);
+            left: calc(0% - 1px);
+            top: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        &:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+        }
+
+        &:hover {
+            opacity: 1;
+
+        }
+
+        .dropdown-content button {
+
+            width: 100%;
+            opacity: 0.7;
+            background: getColor(fourth);
+            border: solid 1px #fff;
+            color: #fff;
+            padding: 5px;
+
+        }
+
+        .dropdown-content button:hover {
+            opacity: 1;
+
+        }
     }
 
-    .dropdown-content button:hover {
+    button#download {
+        z-index: 999;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        border: none;
+        background: getColor(fourth);
+        background: url("../img/save.svg");
+        background-size: cover;
+        opacity: 0.7;
+    }
+    
+    
+    button#download:hover {
         opacity: 1;
-
     }
 }
 
@@ -262,52 +295,41 @@ div.draggable {
 div.infantry {
     background: url("../img/infantry.png");
     background-size: cover;
-
 }
 
 div.infantry.change {
     background: url("../img/infantryEn.png");
     background-size: cover;
-
 }
 
 div.mortar {
-
     background: url("../img/mortar.png");
     background-size: cover;
-
 }
 
 div.mortar.change {
     background: url("../img/mortarEn.png");
     background-size: cover;
-
 }
 
 div.mg {
     background: url("../img/mg.png");
     background-size: cover;
-
-
 }
 
 div.mg.change {
     background: url("../img/mgEn.png");
     background-size: cover;
-
 }
 
 div.tank.change {
     background: url("../img/tankEn.png");
     background-size: cover;
-
 }
 
 div.tank {
     background: url("../img/tank.png");
     background-size: cover;
-
-
 }
 
 div.draggable:hover {
@@ -323,11 +345,10 @@ div#legende {
     justify-content: flex-start;
     flex-direction: column;
     overflow-y: scroll;
-
 }
 
 div.container {
-    width: calc(100vw-70px);
+    width: calc(100vw - 70px);
     height: 100%;
     position: relative;
     display: flex;
@@ -401,10 +422,7 @@ div.container {
     background: rgb(39, 39, 39);
 }
 
-
-
 button:hover {
-
     cursor: pointer;
 }
 
@@ -449,7 +467,6 @@ iframe {
     padding: 5px;
 }
 
-
 .buttonTeam {
     position: absolute;
     bottom: 5px;
@@ -460,7 +477,6 @@ iframe {
     opacity: 0.7;
 
 }
-
 
 .inputName {
 
@@ -473,15 +489,12 @@ iframe {
     text-align: right;
 }
 
-
-
 .inputName:hover {
     opacity: 1;
 }
 
 .divInput {
     display: flex;
-
     position: absolute;
     right: 5px;
     width: 70%;
@@ -521,31 +534,6 @@ iframe {
 
 #nameOfElement.change {
     display: block;
-
-}
-
-#download {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10000000;
-    padding: 0;
-    position: absolute;
-    left: 120px;
-    top: 20px;
-    width: 30px;
-    height: 30px;
-    overflow: hidden;
-    border: none;
-    background: getColor(fourth);
-    background: url("../img/save.svg");
-    background-size: cover;
-    opacity: 0.7;
-}
-
-
-#download:hover {
-    opacity: 1;
 
 }
 

@@ -1,2 +1,26 @@
 <!DOCTYPE html>
-<h1>Redaction des rapports</h1>
+<!--<h1>Redaction des rapports</h1> -->
+<div class=container>
+    <div class=element-div id=map-container>
+        <div class="top-left">
+            <div class="dropdown">
+                <div class="inner">
+                    <span>Rapport </span>
+                    <span><img src="img/arrow-down-filled-triangle.svg"></span>
+                </div>
+                <div class="dropdown-content">
+                    <button onclick="">Rapport Allemand</button>
+                    <button onclick="">Rapport Américain</button>
+
+                </div>
+            </div>
+            <button id=download onclick=DownloadAsImage()></button>
+        </div>
+        <div id=previewImage></div>
+        <div class=zoom>
+            <button class=frame onclick="dezoom()">-</button><button class=frame onclick="zoom()">+</button>
+        </div>
+    </div>
+    <div class=element-div id=legende>
+    </div>
+</div>

@@ -17,15 +17,20 @@
     <div id="nameOfElement"></div>
     <div class=container>
         <div class=element-div id=map-container>
-            <div class="dropdown">
-                <span>carte </span><span><img src="img/arrow-down-filled-triangle.svg"></span>
-                <div class="dropdown-content">
-                    <button onclick="map('url(img/marigny.png)')">rp_marigny</button>
-                    <button onclick="map('url(img/falaise.png)')">rnl_firyofalaise</button>
+            <div class="top-left">
+                <div class="dropdown">
+                    <div class="inner">
+                        <span>carte </span>
+                        <span><img src="img/arrow-down-filled-triangle.svg"></span>
+                    </div>
+                    <div class="dropdown-content">
+                        <button onclick="map('url(img/marigny.png)')">rp_marigny</button>
+                        <button onclick="map('url(img/falaise.png)')">rnl_firyofalaise</button>
 
+                    </div>
                 </div>
+                <button id=download onclick=DownloadAsImage()></button>
             </div>
-            <button id=download onclick=DownloadAsImage()></button>
             <div id=previewImage></div>
             <div class=zoom>
                 <button class=frame onclick="dezoom()">-</button><button class=frame onclick="zoom()">+</button>
@@ -128,6 +133,7 @@
             }
         };
     </script>
+
     <script>
         function supprimer(obj) {
             console.log("." + obj.classList[1]);
@@ -153,8 +159,8 @@
             }
         }
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js">
-    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
 
 
 </body>

@@ -94,11 +94,18 @@ div#content {
   color: #fff;
 }
 
-div.dropdown {
-  z-index: 1;
+div.top-left {
   margin-left: 20px;
   margin-top: 20px;
   position: absolute;
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+div.top-left div.dropdown {
+  z-index: 1;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,27 +114,34 @@ div.dropdown {
   padding: 5px;
   border: solid 1px #fff;
   opacity: 0.7;
+  transition: 0.5s all;
 }
-div.dropdown img {
+div.top-left div.dropdown div.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+div.top-left div.dropdown div.inner img {
   width: 10px;
   margin-left: 20px;
 }
-div.dropdown .dropdown-content {
-  display: none;
+div.top-left div.dropdown .dropdown-content {
+  /*display: none;*/
   position: absolute;
+  width: calc(60% + 1px);
   left: calc(0% - 1px);
   top: 100%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
-div.dropdown:hover .dropdown-content {
+div.top-left div.dropdown:hover .dropdown-content {
   display: block;
   opacity: 1;
 }
-div.dropdown:hover {
+div.top-left div.dropdown:hover {
   opacity: 1;
 }
-div.dropdown .dropdown-content button {
+div.top-left div.dropdown .dropdown-content button {
   width: 100%;
   opacity: 0.7;
   background: var(--color-fourth);
@@ -135,7 +149,22 @@ div.dropdown .dropdown-content button {
   color: #fff;
   padding: 5px;
 }
-div.dropdown .dropdown-content button:hover {
+div.top-left div.dropdown .dropdown-content button:hover {
+  opacity: 1;
+}
+div.top-left button#download {
+  z-index: 999;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border: none;
+  background: var(--color-fourth);
+  background: url("../img/save.svg");
+  background-size: cover;
+  opacity: 0.7;
+}
+div.top-left button#download:hover {
   opacity: 1;
 }
 
@@ -306,7 +335,7 @@ div#legende {
 }
 
 div.container {
-  width: calc(100vw-70px);
+  width: calc(100vw - 70px);
   height: 100%;
   position: relative;
   display: flex;
@@ -487,27 +516,4 @@ iframe {
 
 #nameOfElement.change {
   display: block;
-}
-
-#download {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10000000;
-  padding: 0;
-  position: absolute;
-  left: 120px;
-  top: 20px;
-  width: 30px;
-  height: 30px;
-  overflow: hidden;
-  border: none;
-  background: var(--color-fourth);
-  background: url("../img/save.svg");
-  background-size: cover;
-  opacity: 0.7;
-}
-
-#download:hover {
-  opacity: 1;
 }
