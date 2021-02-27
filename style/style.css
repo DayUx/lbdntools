@@ -47,7 +47,7 @@ button {
   outline-style: none;
 }
 
-div#sidebar {
+nav#sidebar {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,7 +55,7 @@ div#sidebar {
   width: 70px;
   height: 100vh;
 }
-div#sidebar button {
+nav#sidebar button {
   margin-top: 2vh;
   background: transparent;
   border: none;
@@ -64,7 +64,7 @@ div#sidebar button {
   display: flex;
   align-items: center;
 }
-div#sidebar button::before {
+nav#sidebar button:not(.nobutton)::before {
   content: "";
   position: absolute;
   left: 0;
@@ -75,15 +75,15 @@ div#sidebar button::before {
   opacity: 0;
   transition: 0.5s all;
 }
-div#sidebar button:hover::before {
+nav#sidebar button:not(.nobutton):hover::before {
   height: 50px;
   opacity: 1;
 }
-div#sidebar button:hover {
+nav#sidebar button:hover {
   opacity: 1;
   cursor: pointer;
 }
-div#sidebar img {
+nav#sidebar img {
   width: 50px;
 }
 
@@ -126,7 +126,7 @@ div.top-left div.dropdown div.inner img {
   margin-left: 20px;
 }
 div.top-left div.dropdown .dropdown-content {
-  /*display: none;*/
+  display: none;
   position: absolute;
   width: calc(60% + 1px);
   left: calc(0% - 1px);
