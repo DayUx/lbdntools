@@ -9,6 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Outils pour vous assister dans votre expérience de jeu sur NormandyRP">
     <meta name="author" content="Dayux & Firyo">
+    <meta property="og:site_name" content="NormandyRP" />
+    <meta data-n-head="ssr" data-hid="twitter:image" name="twitter:image" content="https://firyo.mtxserv.com/loading_lbdn/images/favicon.png">
 
     <title>NormandyRP Tools</title>
 
