@@ -3,6 +3,7 @@
 
     include_once __DIR__ . "/../vue/vue.php";
     include_once __DIR__ . "/../vue/vueAccueil.php";
+    include_once __DIR__ . "/../vue/vueMap.php";
     include_once __DIR__ . "/../vue/vueRapport.php";
 
     class Controller {
@@ -23,6 +24,7 @@
                         $this->vue = new VueAccueil();
                         break;
                     case "tacticalmap":
+                        $this->vue = new VueMap();
                         break;
                     case "mortar":
                         break;
