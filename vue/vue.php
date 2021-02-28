@@ -38,7 +38,7 @@
         }
 
         protected function showJSLoading() {
-            $this->getSmarty()->display("../templates/jsload.tpl");
+            $this->getSmarty()->display("../templates/jsLoad.tpl");
         }
 
         protected function showEndPage() {
