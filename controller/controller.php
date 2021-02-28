@@ -3,6 +3,7 @@
 
     include_once __DIR__ . "/../vue/vue.php";
     include_once __DIR__ . "/../vue/vueAccueil.php";
+    include_once __DIR__ . "/../vue/vueRapport.php";
 
     class Controller {
         private $vue;
@@ -26,6 +27,7 @@
                     case "mortar":
                         break;
                     case "rapport":
+                        $this->vue = new VueRapport();
                         break;
                     default:
                         $this->vue = new Vue404();

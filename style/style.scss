@@ -365,6 +365,19 @@ div.container {
     }
 }
 
+section.rapport-section {
+    width: calc(100vw - 70px);
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .element-div {
+        height: 100%;
+    }
+}
+
 #map-container {
     overflow: scroll;
     width: calc(100vw - 400px);
