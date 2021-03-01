@@ -29,6 +29,7 @@ body {
   background: var(--color-third);
   margin: 0;
   width: 100vw;
+  height: 100vh;
   display: flex;
   font-family: Arial, sans-serif;
   color: var(--color-black);
@@ -268,6 +269,22 @@ section.accueil-section div.div-content li img.icon {
   margin-right: 20px;
 }
 
+section.rapport-section {
+  width: calc(100vw - 70px);
+  height: 100vh;
+  display: flex;
+}
+section.rapport-section div.element-div.rapport {
+  height: 100%;
+  width: 80%;
+  overflow: hidden;
+}
+section.rapport-section div.element-div.form {
+  height: 100%;
+  width: 20%;
+  overflow: hidden;
+}
+
 div.draggable {
   position: absolute;
   top: 0;
@@ -338,18 +355,6 @@ div#legende {
   justify-content: flex-start;
   flex-direction: column;
   overflow-y: scroll;
-}
-
-div.container {
-  width: calc(100vw - 70px);
-  height: 100%;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-div.container .element-div {
-  height: 100%;
 }
 
 #map-container {
