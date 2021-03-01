@@ -5,7 +5,7 @@
         protected $title = "NormandyRP Tools | Tactial Map";
 
         protected function showBody() {
-            $this->getSmarty()->display("bodyMap.tpl");
+            $this->getSmarty()->display("../templates/bodyMap.tpl");
         }
     }
 ?>

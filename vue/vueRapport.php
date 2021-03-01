@@ -5,7 +5,7 @@
         protected $title = "NormandyRP Tools | Rapport";
 
         protected function showBody() {
-            $this->getSmarty()->display("bodyRapport.tpl");
+            $this->getSmarty()->display("../templates/bodyRapport.tpl");
         }
     }
 ?>

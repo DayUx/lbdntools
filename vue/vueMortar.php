@@ -5,7 +5,7 @@
         protected $title = "NormandyRP Tools | Mortar Tool";
 
         protected function showBody() {
-            $this->getSmarty()->display("bodyMortar.tpl");
+            $this->getSmarty()->display("../templates/bodyMortar.tpl");
         }
     }
 ?>
