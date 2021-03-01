@@ -1,4 +1,27 @@
+<?php
+/* Smarty version 3.1.38, created on 2021-03-01 20:58:07
+  from 'D:\laragon\www\lbdntools\templates\bodyMap.tpl' */
 
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.38',
+  'unifunc' => 'content_603d555f23e376_80113992',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '0f601ff35f1114d42d4670d8339c0977f8138f89' => 
+    array (
+      0 => 'D:\\laragon\\www\\lbdntools\\templates\\bodyMap.tpl',
+      1 => 1614632284,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_603d555f23e376_80113992 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 
 <body>
     <div id="nameOfElement"></div>
@@ -43,7 +66,8 @@
         </div>
     </div>
 
-    <script>
+    <?php echo '<script'; ?>
+>
         function parentWidth(elem) {
             return elem.parentElement.clientWidth;
         }
@@ -119,9 +143,11 @@
                 document.onmousemove = null;
             }
         };
-    </script>
+    <?php echo '</script'; ?>
+>
 
-    <script>
+    <?php echo '<script'; ?>
+>
         function supprimer(obj) {
             console.log("." + obj.classList[1]);
             $("." + obj.classList[1]).remove();
@@ -145,9 +171,13 @@
                 elems[i].classList.toggle("change");
             }
         }
-    </script>
+    <?php echo '</script'; ?>
+>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"><?php echo '</script'; ?>
+>
 
 
-</body>
+</body><?php }
+}
