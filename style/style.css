@@ -1,10 +1,10 @@
 :root {
   --color-first:#323BAC;
   --color-second:#FF4B5C;
-  --color-third:#454545;
+  --color-third:#bdbdbd;
   --color-fourth:#E6E9EE;
-  --color-white:#ffffff;
-  --color-whiteBackground:#ffffff;
+  --color-white:var(--color-black)fff;
+  --color-whiteBackground:var(--color-black)fff;
   --color-black:#000000;
   --theme: "light";
 }
@@ -17,7 +17,7 @@
     --color-fourth:#313131;
     --color-white:#000000;
     --color-whiteBackground:#181818;
-    --color-black:#ffffff;
+    --color-black:#fff;
     --theme: "dark";
   }
 }
@@ -92,7 +92,7 @@ div#content {
   width: calc(100vw - 70px);
   height: 100vh;
   overflow: hidden;
-  color: #fff;
+  color: var(--color-black);
 }
 
 div.top-left {
@@ -113,7 +113,7 @@ div.top-left div.dropdown {
   display: inline-block;
   background: var(--color-fourth);
   padding: 5px;
-  border: solid 1px #fff;
+  border: solid 1px var(--color-black);
   opacity: 0.7;
   transition: 0.5s all;
 }
@@ -129,7 +129,6 @@ div.top-left div.dropdown div.inner img {
 div.top-left div.dropdown .dropdown-content {
   display: none;
   position: absolute;
-  width: calc(60% + 1px);
   left: calc(0% - 1px);
   top: 100%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -145,9 +144,10 @@ div.top-left div.dropdown:hover {
 div.top-left div.dropdown .dropdown-content button {
   width: 100%;
   opacity: 0.7;
+  text-align: left;
   background: var(--color-fourth);
-  border: solid 1px #fff;
-  color: #fff;
+  border: solid 1px var(--color-black);
+  color: var(--color-black);
   padding: 5px;
 }
 div.top-left div.dropdown .dropdown-content button:hover {
@@ -204,7 +204,7 @@ div.zoom button {
   font-size: 20px;
   border: solid 1px;
   transition: 0.5s all;
-  color: #fff;
+  color: var(--color-black);
   height: 30px;
   width: 30px;
 }
@@ -373,8 +373,16 @@ div#legende {
   background: transparent;
   padding: 0;
   border: none;
-  color: #fff;
+  color: var(--color-black);
   opacity: 0.7;
+}
+
+.container {
+  width: calc(100vw-70px);
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 
 #add-module:hover {
@@ -394,7 +402,7 @@ div#legende {
   position: absolute;
   top: 100%;
   min-width: 100px;
-  border: solid 1px #fff;
+  border: solid 1px var(--color-black);
   margin-bottom: 20px;
   margin-top: 0px;
   background: var(--color-fourth);
@@ -406,7 +414,7 @@ div#legende {
 }
 
 .add-module-button {
-  color: #fff;
+  color: var(--color-black);
   background: transparent;
   border: none;
   padding: 5px;
@@ -427,7 +435,7 @@ button:hover {
   min-height: 100px;
   width: 250px;
   position: relative;
-  border: solid 1px #fff;
+  border: solid 1px var(--color-black);
   padding: 5px;
 }
 
@@ -436,7 +444,7 @@ button:hover {
   font-size: 20px;
   padding-left: 6px;
   padding-right: 6px;
-  border: solid 1px #fff;
+  border: solid 1px var(--color-black);
 }
 
 .delete {
@@ -447,7 +455,7 @@ button:hover {
   position: absolute;
   bottom: 5px;
   right: 5px;
-  border: solid 1px #fff;
+  border: solid 1px var(--color-black);
   opacity: 0.7;
 }
 
@@ -458,7 +466,7 @@ button:hover {
 iframe {
   height: 100%;
   width: 100%;
-  border: solid 1px #fff;
+  border: solid 1px var(--color-black);
   padding: 5px;
 }
 
@@ -467,15 +475,15 @@ iframe {
   bottom: 5px;
   left: 5px;
   background: transparent;
-  color: #fff;
-  border: solid 1px #fff;
+  color: var(--color-black);
+  border: solid 1px var(--color-black);
   opacity: 0.7;
 }
 
 .inputName {
   background: transparent;
-  color: #fff;
-  border: solid 1px #fff;
+  color: var(--color-black);
+  border: solid 1px var(--color-black);
   opacity: 0.7;
   border-radius: 0px;
   width: 70%;
@@ -491,12 +499,13 @@ iframe {
   position: absolute;
   right: 5px;
   width: 70%;
+  bottom: 35px;
 }
 
 .okInput {
   background: transparent;
-  color: #fff;
-  border: solid 1px #fff;
+  color: var(--color-black);
+  border: solid 1px var(--color-black);
   opacity: 0.7;
 }
 
@@ -509,8 +518,8 @@ iframe {
 }
 
 .nameInput {
-  min-width: 50px;
-  border: solid 1px #fff;
+  min-width: 55px;
+  border: solid 1px var(--color-black);
   opacity: 0.7;
 }
 
@@ -521,7 +530,7 @@ iframe {
   transform: translate(-50%, -200%);
   background: var(--color-fourth);
   padding: 5px;
-  border: solid 1px #fff;
+  border: solid 1px var(--color-black);
   z-index: 100000;
 }
 

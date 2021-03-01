@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.38, created on 2021-03-01 17:50:53
+/* Smarty version 3.1.38, created on 2021-03-01 21:05:08
   from 'D:\laragon\www\lbdntools\templates\bodyAccueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.38',
-  'unifunc' => 'content_603d297d4f13e2_13951089',
+  'unifunc' => 'content_603d570493d1a6_15757892',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e3722e711339b861e8f550bf0b97c0457d90a8c3' => 
     array (
       0 => 'D:\\laragon\\www\\lbdntools\\templates\\bodyAccueil.tpl',
-      1 => 1614621032,
+      1 => 1614632332,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_603d297d4f13e2_13951089 (Smarty_Internal_Template $_smarty_tpl) {
+function content_603d570493d1a6_15757892 (Smarty_Internal_Template $_smarty_tpl) {
 ?><section class="accueil-section">
     <div class=div-content>
         <h1>Bienvenue sur NormandyRP Tools</h1>
