@@ -7,8 +7,8 @@
                     <span><img src="img/arrow-down-filled-triangle.svg"></span>
                 </div>
                 <div class="dropdown-content">
-                    <button class="rapport-all">Rapport Allemand</button>
-                    <button class="rapport-us">Rapport Américain</button>
+                    <button class="rapport-all">Rapport&nbspallemand</button>
+                    <button class="rapport-us">Rapport&nbspaméricain</button>
                 </div>
             </div>
             <button id=download onclick=DownloadAsImage()></button>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.38, created on 2021-03-01 21:03:26
+/* Smarty version 3.1.38, created on 2021-03-02 11:37:28
   from 'D:\laragon\www\lbdntools\templates\bodyMap.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.38',
-  'unifunc' => 'content_603d569e93c4f8_11865545',
+  'unifunc' => 'content_603e2378d4add8_69597809',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f601ff35f1114d42d4670d8339c0977f8138f89' => 
     array (
       0 => 'D:\\laragon\\www\\lbdntools\\templates\\bodyMap.tpl',
-      1 => 1614632329,
+      1 => 1614685038,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_603d569e93c4f8_11865545 (Smarty_Internal_Template $_smarty_tpl) {
+function content_603e2378d4add8_69597809 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <body>
@@ -30,7 +30,7 @@ function content_603d569e93c4f8_11865545 (Smarty_Internal_Template $_smarty_tpl)
             <div class="top-left">
                 <div class="dropdown">
                     <div class="inner">
-                        <span>carte </span>
+                        <span>Carte </span>
                         <span><img src="img/arrow-down-filled-triangle.svg"></span>
                     </div>
                     <div class="dropdown-content">

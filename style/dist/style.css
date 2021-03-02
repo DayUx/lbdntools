@@ -1,17 +1,12 @@
 :root {
   --color-first:#323BAC;
   --color-second:#FF4B5C;
-  --color-third:#E6E9EE;
-  --color-fourth:#e7e7e7;
-  --color-white:var(--color-black)fff;
-  --color-whiteBackground:var(--color-black)fff;
+  --color-third:#454545;
+  --color-fourth:#E6E9EE;
+  --color-white:#ffffff;
+  --color-whiteBackground:#ffffff;
   --color-black:#000000;
   --theme: "light";
-  --filter-black:brightness(0%);
-  --left-sidebar:-4px;
-
-
-
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,11 +17,8 @@
     --color-fourth:#313131;
     --color-white:#000000;
     --color-whiteBackground:#181818;
-    --color-black:#fff;
+    --color-black:#ffffff;
     --theme: "dark";
-    --filter-black:none;
-    --left-sidebar:0;
-
   }
 }
 * {
@@ -64,17 +56,7 @@ nav#sidebar {
   width: 70px;
   height: 100vh;
 }
-
-nav#sidebar button:first-child {
-  filter: none;
-}
-
-
-
-
-
 nav#sidebar button {
-  filter:var(--filter-black);
   margin-top: 2vh;
   background: transparent;
   border: none;
@@ -86,7 +68,7 @@ nav#sidebar button {
 nav#sidebar button:not(.nobutton)::before {
   content: "";
   position: absolute;
-  left: var(--left-sidebar);
+  left: 0;
   width: 5px;
   height: 0;
   border-radius: 100px;
@@ -110,18 +92,21 @@ div#content {
   width: calc(100vw - 70px);
   height: 100vh;
   overflow: hidden;
-  color: var(--color-black);
+  color: #fff;
 }
 
 div.top-left {
   margin-left: 20px;
   margin-top: 20px;
-  position: absolute;  display: flex;
+  position: absolute;
+  width: 10%;
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
 div.top-left div.dropdown {
   z-index: 1;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,14 +125,12 @@ div.top-left div.dropdown div.inner {
 div.top-left div.dropdown div.inner img {
   width: 10px;
   margin-left: 20px;
-  filter:var(--filter-black);
-
 }
 div.top-left div.dropdown .dropdown-content {
-  width: min-content;
   display: none;
   position: absolute;
-  left: 0;
+  width: calc(60% + 1px);
+  left: calc(0% - 1px);
   top: 100%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -162,7 +145,6 @@ div.top-left div.dropdown:hover {
 div.top-left div.dropdown .dropdown-content button {
   width: 100%;
   opacity: 0.7;
-  text-align: left;
   background: var(--color-fourth);
   border: solid 1px var(--color-black);
   color: var(--color-black);
@@ -173,8 +155,6 @@ div.top-left div.dropdown .dropdown-content button:hover {
 }
 div.top-left button#download {
   z-index: 999;
-  filter:var(--filter-black);
-  margin-left:10px;
   padding: 0;
   width: 30px;
   height: 30px;
@@ -393,16 +373,8 @@ div#legende {
   background: transparent;
   padding: 0;
   border: none;
-  color: var(--color-black);
+  color: #fff;
   opacity: 0.7;
-}
-
-.container {
-  width: calc(100vw-70px);
-  height: 100%;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
 }
 
 #add-module:hover {
@@ -422,7 +394,7 @@ div#legende {
   position: absolute;
   top: 100%;
   min-width: 100px;
-  border: solid 1px var(--color-black);
+  border: solid 1px #fff;
   margin-bottom: 20px;
   margin-top: 0px;
   background: var(--color-fourth);
@@ -434,7 +406,7 @@ div#legende {
 }
 
 .add-module-button {
-  color: var(--color-black);
+  color: #fff;
   background: transparent;
   border: none;
   padding: 5px;
@@ -455,7 +427,7 @@ button:hover {
   min-height: 100px;
   width: 250px;
   position: relative;
-  border: solid 1px var(--color-black);
+  border: solid 1px #fff;
   padding: 5px;
 }
 
@@ -464,7 +436,7 @@ button:hover {
   font-size: 20px;
   padding-left: 6px;
   padding-right: 6px;
-  border: solid 1px var(--color-black);
+  border: solid 1px #fff;
 }
 
 .delete {
@@ -475,7 +447,7 @@ button:hover {
   position: absolute;
   bottom: 5px;
   right: 5px;
-  border: solid 1px var(--color-black);
+  border: solid 1px #fff;
   opacity: 0.7;
 }
 
@@ -486,7 +458,7 @@ button:hover {
 iframe {
   height: 100%;
   width: 100%;
-  border: solid 1px var(--color-black);
+  border: solid 1px #fff;
   padding: 5px;
 }
 
@@ -495,15 +467,15 @@ iframe {
   bottom: 5px;
   left: 5px;
   background: transparent;
-  color: var(--color-black);
-  border: solid 1px var(--color-black);
+  color: #fff;
+  border: solid 1px #fff;
   opacity: 0.7;
 }
 
 .inputName {
   background: transparent;
-  color: var(--color-black);
-  border: solid 1px var(--color-black);
+  color: #fff;
+  border: solid 1px #fff;
   opacity: 0.7;
   border-radius: 0px;
   width: 70%;
@@ -519,13 +491,12 @@ iframe {
   position: absolute;
   right: 5px;
   width: 70%;
-  bottom: 35px;
 }
 
 .okInput {
   background: transparent;
-  color: var(--color-black);
-  border: solid 1px var(--color-black);
+  color: #fff;
+  border: solid 1px #fff;
   opacity: 0.7;
 }
 
@@ -538,8 +509,8 @@ iframe {
 }
 
 .nameInput {
-  min-width: 55px;
-  border: solid 1px var(--color-black);
+  min-width: 50px;
+  border: solid 1px #fff;
   opacity: 0.7;
 }
 
@@ -550,7 +521,7 @@ iframe {
   transform: translate(-50%, -200%);
   background: var(--color-fourth);
   padding: 5px;
-  border: solid 1px var(--color-black);
+  border: solid 1px #fff;
   z-index: 100000;
 }
 

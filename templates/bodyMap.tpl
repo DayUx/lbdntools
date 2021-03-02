@@ -7,7 +7,7 @@
             <div class="top-left">
                 <div class="dropdown">
                     <div class="inner">
-                        <span>carte </span>
+                        <span>Carte </span>
                         <span><img src="img/arrow-down-filled-triangle.svg"></span>
                     </div>
                     <div class="dropdown-content">
