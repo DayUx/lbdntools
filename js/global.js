@@ -124,11 +124,14 @@ function addLegendElement(choice) {
 };
 
 function addModuleMenu() {
+    console.log("slt");
+
     document.getElementById("add-module-menu").classList.toggle("change");
 
 };
 
 function showName(obj) {
+    console.log("slt");
 
     document.getElementById("nameOfElement").classList.toggle("change");
     var name = obj.classList[1];
@@ -150,6 +153,7 @@ document.addEventListener('mousemove', function (e) {
 
 function submit(obj) {
     var class1 = obj.classList[0];
+    console.log("slt");
 
 
     var input = document.getElementsByClassName("inputName " + class1);
@@ -181,13 +185,16 @@ function erreur(content) {
 }
 
 function resetValue(obj) {
+    console.log("slt");
+
     window.setTimeout(function () {
         resetValue2(obj);
-    }, 100);
+    }, 300);
 
 }
 
 function resetValue2(obj) {
+    console.log("slt");
     obj.value = obj.classList[0];
 }
 
