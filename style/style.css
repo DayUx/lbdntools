@@ -626,3 +626,10 @@ iframe {
   width: 55%;
   font-size: 6vh;
 }
+#rapport-container textarea.regiment{
+  position: absolute;
+  right:0;
+  bottom: 0;
+  height: 43%;
+  width: 29.2%;
+}

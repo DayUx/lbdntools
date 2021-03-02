@@ -1,8 +1,10 @@
 <section class="rapport-section">
     <div id=rapport-container>
-        <textarea placeholder="Lieu&#10Date&#10Grade&#10Nom Prénom" class=nom-prenom value="nom / prénom"></textarea>
-        <textarea class=contenu value="contenu du rapport"></textarea>
-        <textarea class=titre value="contenu du rapport"></textarea>
+        <textarea placeholder="Lieu&#10Date&#10Grade&#10Nom Prénom" class=nom-prenom ></textarea>
+        <textarea placeholder="Rapport" class=contenu ></textarea>
+        <textarea class=titre placeholder="Titre"></textarea>
+        <textarea class=inventaire placeholder="Inventaire"></textarea>
+        <textarea class=regiment placeholder="Régiment, compagnie ..."></textarea>
 
     </div>
     <div class="element-div rapport">
