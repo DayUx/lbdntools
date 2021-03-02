@@ -593,3 +593,11 @@ iframe {
   height: 43%;
   width: 29.2%;
 }
+
+#rapport-container textarea.inventaire{
+  position: absolute;
+  right:29.5%;
+  bottom: 0;
+  height: 43%;
+  width: 39.7%;
+}
