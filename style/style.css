@@ -583,6 +583,7 @@ iframe {
   border: none;
   font-size: 3vh;
   font-family: "1942";
+  overflow: hidden;
   resize: none;
 }
 
@@ -615,5 +616,13 @@ iframe {
   bottom: 43%;
   height: 32%;
   width: 46.9%;
-  font-size: 5vh;
+  font-size: 6vh;
+}
+#rapport-container textarea.titre{
+  position: absolute;
+  right:18.4%;
+  top: 0;
+  height: 24.5%;
+  width: 55%;
+  font-size: 6vh;
 }
