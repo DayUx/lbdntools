@@ -1,12 +1,7 @@
-$H1: 35px;
-$H2: 27.5px;
-$defaultFontSize: 16px;
-
 @font-face {
   font-family: "1942";
   src: url("../font/1942.ttf");
 }
-
 @font-face {
   font-family: "TTypeWriter";
   src: url("../font/tt.ttf");
