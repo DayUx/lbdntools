@@ -477,6 +477,7 @@ button:hover {
 .delete {
   width: 25px;
   height: 25px;
+  filter: var(--filter-black);
   background: url("../img/cross-close-svgrepo-com.svg");
   background-size: cover;
   position: absolute;
