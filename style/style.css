@@ -125,7 +125,7 @@ div#content {
   width: calc(100vw - 70px);
   height: 100vh;
   overflow: hidden;
-  color: #fff;
+  color: var(--color-black);
 }
 
 div.top-left {
@@ -146,7 +146,7 @@ div.top-left div.dropdown {
   padding: 5px;
   border: solid 1px var(--color-black);
   opacity: 0.7;
-  transition: 0.5s all;
+  transition: 0.2s all;
 }
 div.top-left div.dropdown div.inner {
   display: flex;
@@ -164,7 +164,6 @@ div.top-left div.dropdown .dropdown-content {
   position: absolute;
   left: 0;
   top: 100%;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 div.top-left div.dropdown:hover .dropdown-content {
@@ -173,8 +172,10 @@ div.top-left div.dropdown:hover .dropdown-content {
 }
 div.top-left div.dropdown:hover {
   opacity: 1;
+  cursor: pointer;
 }
 div.top-left div.dropdown .dropdown-content button {
+  text-align: left;
   width: 100%;
   opacity: 0.7;
   background: var(--color-fourth);
@@ -301,6 +302,7 @@ section.accueil-section div.div-content li {
 section.accueil-section div.div-content li img.icon {
   width: 50px;
   margin-right: 20px;
+  filter: var(--filter-black);
 }
 
 section.rapport-section {
@@ -389,6 +391,9 @@ div#legende {
   justify-content: flex-start;
   flex-direction: column;
   overflow-y: scroll;
+  -webkit-box-shadow: inset 11px 0px 5px -11px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 11px 0px 5px -11px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 11px 0px 5px -11px rgba(0, 0, 0, 0.75);
 }
 
 #map-container {
@@ -407,7 +412,7 @@ div#legende {
   background: transparent;
   padding: 0;
   border: none;
-  color: #fff;
+  color: var(--color-black);
   opacity: 0.7;
 }
 
@@ -428,7 +433,7 @@ div#legende {
   position: absolute;
   top: 100%;
   min-width: 100px;
-  border: solid 1px #fff;
+  border: solid 1px var(--color-black);
   margin-bottom: 20px;
   margin-top: 0px;
   background: var(--color-fourth);
@@ -440,7 +445,7 @@ div#legende {
 }
 
 .add-module-button {
-  color: #fff;
+  color: var(--color-black);
   background: transparent;
   border: none;
   padding: 5px;
@@ -461,7 +466,7 @@ button:hover {
   min-height: 100px;
   width: 250px;
   position: relative;
-  border: solid 1px #fff;
+  border: solid 1px var(--color-black);
   padding: 5px;
 }
 
@@ -470,10 +475,11 @@ button:hover {
   font-size: 20px;
   padding-left: 6px;
   padding-right: 6px;
-  border: solid 1px #fff;
+  border: solid 1px var(--color-black);
 }
 
 .delete {
+  filter: var(--filter-black);
   width: 25px;
   height: 25px;
   background: url("../img/cross-close-svgrepo-com.svg");
@@ -481,7 +487,7 @@ button:hover {
   position: absolute;
   bottom: 5px;
   right: 5px;
-  border: solid 1px #fff;
+  border: solid 1px var(--color-black);
   opacity: 0.7;
 }
 
@@ -492,7 +498,7 @@ button:hover {
 iframe {
   height: 100%;
   width: 100%;
-  border: solid 1px #fff;
+  border: solid 1px var(--color-black);
   padding: 5px;
 }
 
@@ -501,15 +507,15 @@ iframe {
   bottom: 5px;
   left: 5px;
   background: transparent;
-  color: #fff;
-  border: solid 1px #fff;
+  color: var(--color-black);
+  border: solid 1px var(--color-black);
   opacity: 0.7;
 }
 
 .inputName {
   background: transparent;
-  color: #fff;
-  border: solid 1px #fff;
+  color: var(--color-black);
+  border: solid 1px var(--color-black);
   opacity: 0.7;
   border-radius: 0px;
   width: 70%;
@@ -525,12 +531,13 @@ iframe {
   position: absolute;
   right: 5px;
   width: 70%;
+  bottom: 35px;
 }
 
 .okInput {
   background: transparent;
-  color: white;
-  border: solid 1px white;
+  color: var(--color-black);
+  border: solid 1px var(--color-black);
   opacity: 0.7;
 }
 
@@ -543,8 +550,8 @@ iframe {
 }
 
 .nameInput {
-  min-width: 50px;
-  border: solid 1px white;
+  min-width: 55px;
+  border: solid 1px var(--color-black);
   opacity: 0.7;
 }
 
@@ -555,7 +562,7 @@ iframe {
   transform: translate(-50%, -200%);
   background: var(--color-fourth);
   padding: 5px;
-  border: solid 1px #fff;
+  border: solid 1px var(--color-black);
   z-index: 100000;
 }
 
@@ -627,4 +634,12 @@ iframe {
   bottom: 0;
   height: 43%;
   width: 39.7%;
+}
+
+.container {
+  width: calc(100vw - 70px);
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
