@@ -594,10 +594,12 @@ iframe {
 
 
 #rapport-container{
+  margin-left: 50%;
+  transform: translate(-50%);
   position: absolute;
   background-image: url(../img/rapport_allemand.png);
   background-size: cover;
-  width:calc(140vh);
+  width:calc(141.4vh);
   height: calc(100vh);
 }
 #rapport-container textarea.contenu{
@@ -605,13 +607,13 @@ iframe {
   left:0;
   bottom: 0;
   height: 75%;
-  width: 31%;
+  width: 30.7%;
 }
 #rapport-container textarea.nom-prenom{
   position: absolute;
   right:0;
   bottom: 43%;
   height: 32%;
-  width: 46.5%;
+  width: 46.9%;
   font-size: 5vh;
 }
