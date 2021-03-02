@@ -1,19 +1,3 @@
-:root {
-  --color-first:#323BAC;
-  --color-second:#1687a7;
-  --color-third:#f6f5f5;
-  --color-fourth:#d3e0ea;
-  --color-white:var(--color-black)fff;
-  --color-whiteBackground:var(--color-black)fff;
-  --color-black:#000;
-  --theme: "light";
-  --filter-black:brightness(0%);
-  --left-sidebar:-4px;
-
-
-
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --color-first:#323BAC;
@@ -26,21 +10,43 @@
     --theme: "dark";
     --filter-black:none;
     --left-sidebar:0;
-
   }
 }
+:root {
+  --color-first:#323BAC;
+  --color-second:#1687a7;
+  --color-third:#f6f5f5;
+  --color-fourth:#d3e0ea;
+  --color-white:#ffffff;
+  --color-whiteBackground:#ffffff;
+  --color-black:#000000;
+  --theme: "light";
+  --filter-black:brightness(0%);
+  --left-sidebar:-4px;
+}
 
-
-
-
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-first:#323BAC;
+    --color-second:#FF4B5C;
+    --color-third:#454545;
+    --color-fourth:#313131;
+    --color-white:#000000;
+    --color-whiteBackground:#181818;
+    --color-black:#ffffff;
+    --theme: "dark";
+    --filter-black:none;
+    --left-sidebar:0;
+  }
+}
 @font-face {
   font-family: "1942";
   src: url("../font/1942.ttf");
 }
-
-
-
-
+@font-face {
+  font-family: "TTypeWriter";
+  src: url("../font/tt.ttf");
+}
 * {
   box-sizing: border-box;
 }
@@ -69,9 +75,9 @@ button {
 }
 
 nav#sidebar {
-  -webkit-box-shadow: inset -7px 0px 5px -8px rgba(0,0,0,0.5);
--moz-box-shadow: inset -7px 0px 5px -8px rgba(141, 78, 78, 0.5);
-box-shadow: inset -7px 0px 5px -8px rgba(0,0,0,0.5);
+  -webkit-box-shadow: inset -7px 0px 5px -8px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset -7px 0px 5px -8px rgba(0, 0, 0, 0.5);
+  box-shadow: inset -7px 0px 5px -8px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,17 +85,11 @@ box-shadow: inset -7px 0px 5px -8px rgba(0,0,0,0.5);
   width: 70px;
   height: 100vh;
 }
-
 nav#sidebar button:first-child {
   filter: none;
 }
-
-
-
-
-
 nav#sidebar button {
-  filter:var(--filter-black);
+  filter: var(--filter-black);
   margin-top: 2vh;
   background: transparent;
   border: none;
@@ -125,13 +125,14 @@ div#content {
   width: calc(100vw - 70px);
   height: 100vh;
   overflow: hidden;
-  color: var(--color-black);
+  color: #fff;
 }
 
 div.top-left {
   margin-left: 20px;
   margin-top: 20px;
-  position: absolute;  display: flex;
+  position: absolute;
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
@@ -153,10 +154,9 @@ div.top-left div.dropdown div.inner {
   justify-content: space-between;
 }
 div.top-left div.dropdown div.inner img {
+  filter: var(--filter-black);
   width: 10px;
   margin-left: 20px;
-  filter:var(--filter-black);
-
 }
 div.top-left div.dropdown .dropdown-content {
   width: min-content;
@@ -177,7 +177,6 @@ div.top-left div.dropdown:hover {
 div.top-left div.dropdown .dropdown-content button {
   width: 100%;
   opacity: 0.7;
-  text-align: left;
   background: var(--color-fourth);
   border: solid 1px var(--color-black);
   color: var(--color-black);
@@ -188,17 +187,17 @@ div.top-left div.dropdown .dropdown-content button:hover {
 }
 div.top-left button#download {
   z-index: 999;
-  filter:var(--filter-black);
-  margin-left:10px;
   padding: 0;
   width: 30px;
   height: 30px;
   overflow: hidden;
+  margin-left: 10px;
   border: none;
   background: var(--color-fourth);
   background: url("../img/save.svg");
   background-size: cover;
   opacity: 0.7;
+  filter: var(--filter-black);
 }
 div.top-left button#download:hover {
   opacity: 1;
@@ -382,9 +381,6 @@ div.draggable:hover {
 }
 
 div#legende {
-  -webkit-box-shadow: inset 11px 0px 5px -11px rgba(0,0,0,0.75);
--moz-box-shadow: inset 11px 0px 5px -11px rgba(0,0,0,0.75);
-box-shadow: inset 11px 0px 5px -11px rgba(0,0,0,0.75);
   height: 100vh;
   min-width: 330px;
   background: var(--color-fourth);
@@ -411,21 +407,12 @@ box-shadow: inset 11px 0px 5px -11px rgba(0,0,0,0.75);
   background: transparent;
   padding: 0;
   border: none;
-  color: var(--color-black);
+  color: #fff;
   opacity: 0.7;
-}
-
-.container {
-  width: calc(100vw-70px);
-  height: 100%;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
 }
 
 #add-module:hover {
   opacity: 1;
-
 }
 
 .add-module-div {
@@ -441,7 +428,7 @@ box-shadow: inset 11px 0px 5px -11px rgba(0,0,0,0.75);
   position: absolute;
   top: 100%;
   min-width: 100px;
-  border: solid 1px var(--color-black);
+  border: solid 1px #fff;
   margin-bottom: 20px;
   margin-top: 0px;
   background: var(--color-fourth);
@@ -453,7 +440,7 @@ box-shadow: inset 11px 0px 5px -11px rgba(0,0,0,0.75);
 }
 
 .add-module-button {
-  color: var(--color-black);
+  color: #fff;
   background: transparent;
   border: none;
   padding: 5px;
@@ -461,7 +448,7 @@ box-shadow: inset 11px 0px 5px -11px rgba(0,0,0,0.75);
 }
 
 .add-module-button:hover {
-  background: var(--color-second);
+  background: #272727;
 }
 
 button:hover {
@@ -474,7 +461,7 @@ button:hover {
   min-height: 100px;
   width: 250px;
   position: relative;
-  border: solid 1px var(--color-black);
+  border: solid 1px #fff;
   padding: 5px;
 }
 
@@ -483,19 +470,18 @@ button:hover {
   font-size: 20px;
   padding-left: 6px;
   padding-right: 6px;
-  border: solid 1px var(--color-black);
+  border: solid 1px #fff;
 }
 
 .delete {
   width: 25px;
   height: 25px;
-  filter: var(--filter-black);
   background: url("../img/cross-close-svgrepo-com.svg");
   background-size: cover;
   position: absolute;
   bottom: 5px;
   right: 5px;
-  border: solid 1px var(--color-black);
+  border: solid 1px #fff;
   opacity: 0.7;
 }
 
@@ -506,7 +492,7 @@ button:hover {
 iframe {
   height: 100%;
   width: 100%;
-  border: solid 1px var(--color-black);
+  border: solid 1px #fff;
   padding: 5px;
 }
 
@@ -515,15 +501,15 @@ iframe {
   bottom: 5px;
   left: 5px;
   background: transparent;
-  color: var(--color-black);
-  border: solid 1px var(--color-black);
+  color: #fff;
+  border: solid 1px #fff;
   opacity: 0.7;
 }
 
 .inputName {
   background: transparent;
-  color: var(--color-black);
-  border: solid 1px var(--color-black);
+  color: #fff;
+  border: solid 1px #fff;
   opacity: 0.7;
   border-radius: 0px;
   width: 70%;
@@ -539,13 +525,12 @@ iframe {
   position: absolute;
   right: 5px;
   width: 70%;
-  bottom: 35px;
 }
 
 .okInput {
   background: transparent;
-  color: var(--color-black);
-  border: solid 1px var(--color-black);
+  color: white;
+  border: solid 1px white;
   opacity: 0.7;
 }
 
@@ -558,8 +543,8 @@ iframe {
 }
 
 .nameInput {
-  min-width: 55px;
-  border: solid 1px var(--color-black);
+  min-width: 50px;
+  border: solid 1px white;
   opacity: 0.7;
 }
 
@@ -570,7 +555,7 @@ iframe {
   transform: translate(-50%, -200%);
   background: var(--color-fourth);
   padding: 5px;
-  border: solid 1px var(--color-black);
+  border: solid 1px #fff;
   z-index: 100000;
 }
 
@@ -578,65 +563,67 @@ iframe {
   display: block;
 }
 
-#rapport-container textarea{
+#rapport-container textarea {
   background: transparent;
   border: none;
   font-size: 3vh;
-  font-family: "1942";
-  overflow: hidden;
+  font-family: "TTypeWriter";
   resize: none;
 }
 
-#rapport-container textarea:hover{
+#rapport-container textarea:hover {
   -webkit-box-shadow: 0px 0px 2px 3px var(--color-second);
   -moz-box-shadow: 0px 0px 2px 3px var(--color-second);
   box-shadow: 0px 0px 2px 3px var(--color-second);
 }
 
-
-#rapport-container{
+#rapport-container {
   margin-left: 50%;
   transform: translate(-50%);
   position: absolute;
   background-image: url(../img/rapport_allemand.png);
   background-size: cover;
-  width:calc(141.4vh);
+  width: calc(141.4vh);
   height: calc(100vh);
 }
-#rapport-container textarea.contenu{
+
+#rapport-container textarea.contenu {
   position: absolute;
-  left:0;
+  left: 0;
   bottom: 0;
   height: 75%;
   width: 30.7%;
 }
-#rapport-container textarea.nom-prenom{
+
+#rapport-container textarea.nom-prenom {
   position: absolute;
-  right:0;
+  right: 0;
   bottom: 43%;
   height: 32%;
   width: 46.9%;
-  font-size: 6vh;
+  font-size: 5vh;
 }
-#rapport-container textarea.titre{
+
+#rapport-container textarea.titre {
   position: absolute;
-  right:18.4%;
+  right: 18.4%;
   top: 0;
   height: 24.5%;
   width: 55%;
   font-size: 6vh;
 }
-#rapport-container textarea.regiment{
+
+#rapport-container textarea.regiment {
   position: absolute;
-  right:0;
+  right: 0;
   bottom: 0;
   height: 43%;
   width: 29.2%;
 }
 
-#rapport-container textarea.inventaire{
+#rapport-container textarea.inventaire {
   position: absolute;
-  right:29.5%;
+  right: 29.5%;
   bottom: 0;
   height: 43%;
   width: 39.7%;

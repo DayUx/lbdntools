@@ -32,6 +32,9 @@ button {
 }
 
 nav#sidebar {
+    -webkit-box-shadow: inset -7px 0px 5px -8px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset -7px 0px 5px -8px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -7px 0px 5px -8px rgba(0,0,0,0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,7 +42,14 @@ nav#sidebar {
     width: 70px;
     height: 100vh;
 
+
+
+    button:first-child{
+        filter: none;
+    }
+
     button {
+        filter: getFilter(black);
         margin-top: 2vh;
         background: transparent;
         border: none;
@@ -53,7 +63,7 @@ nav#sidebar {
     button:not(.nobutton)::before {
         content: "";
         position: absolute;
-        left: 0;
+        left: getLeft(sidebar);
         width: 5px;
         height: 0;
         border-radius: 100px;
@@ -65,7 +75,7 @@ nav#sidebar {
     button:not(.nobutton):hover::before {
         height: 50px;
         opacity: 1;
-        left: 0;
+        
 
     }
 
@@ -91,14 +101,12 @@ div.top-left {
     margin-left: 20px;
     margin-top: 20px;
     position: absolute;
-    width: 10%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     div.dropdown {
         z-index: 1;
-        width: 60%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -115,16 +123,18 @@ div.top-left {
             justify-content: space-between;
 
             img {
+                filter: getFilter(black);
+
                 width: 10px;
                 margin-left: 20px;
             }
         }
 
         .dropdown-content {
+            width: min-content;
             display: none;
             position: absolute;
-            width: calc(60% + 1px);
-            left: calc(0% - 1px);
+            left: 0;
             top: 100%;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             overflow: hidden;
@@ -163,11 +173,14 @@ div.top-left {
         width: 30px;
         height: 30px;
         overflow: hidden;
+        margin-left:10px;
         border: none;
         background: getColor(fourth);
         background: url("../img/save.svg");
         background-size: cover;
         opacity: 0.7;
+        filter: getFilter(black);
+
     }
 
 
@@ -593,4 +606,28 @@ iframe {
     height: 32%;
     width: 46.9%;
     font-size: 5vh;
+}
+
+#rapport-container textarea.titre{
+    position: absolute;
+    right:18.4%;
+    top: 0;
+    height: 24.5%;
+    width: 55%;
+    font-size: 6vh;
+}
+#rapport-container textarea.regiment{
+    position: absolute;
+    right:0;
+    bottom: 0;
+    height: 43%;
+    width: 29.2%;
+}
+  
+#rapport-container textarea.inventaire{
+    position: absolute;
+    right:29.5%;
+    bottom: 0;
+    height: 43%;
+    width: 39.7%;
 }

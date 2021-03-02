@@ -1,13 +1,32 @@
 // Thème clair
 $colors:(
     first: #323BAC,
-    second: #FF4B5C,
-    third: #454545,
-    fourth: #E6E9EE,
+    second: #1687a7,
+    third: #f6f5f5,
+    fourth: #d3e0ea,
     white: #ffffff,
     whiteBackground: #ffffff,
     black: #000000,
 );
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+      --color-first:#323BAC;
+      --color-second:#FF4B5C;
+      --color-third:#454545;
+      --color-fourth:#313131;
+      --color-white:#000000;
+      --color-whiteBackground:#181818;
+      --color-black:#fff;
+      --theme: "dark";
+      --filter-black:none;
+      --left-sidebar:0;
+  
+    }
+  }
+  
+
 
 // Thème sombre
 $colors-dark:(
@@ -25,6 +44,8 @@ $colors-dark:(
         --color-#{$name}:#{$color};
     };
     --theme: "light";
+    --filter-black:brightness(0%);
+    --left-sidebar:-4px;
 };
 
 @media (prefers-color-scheme: dark) {
@@ -33,9 +54,20 @@ $colors-dark:(
             --color-#{$name}:#{$color};
         }
         --theme: "dark";
+        --filter-black:none;
+        --left-sidebar:0;
     }
 }
 
 @function getColor($color-name) {
     @return var(--color-#{$color-name});
+}
+
+
+@function getFilter($filter-name){
+    @return var(--filter-#{$filter-name});
+}
+
+@function getLeft($left-amount){
+    @return var(--left-#{$left-amount});
 }
