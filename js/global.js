@@ -220,3 +220,14 @@ function DownloadAsImage() {
     document.getElementById('map').style.height = height;
     document.getElementById('map').style.width = height;
 }
+
+
+function DownloadAsImage2() {
+    
+    var element = $("#rapport-container")[0];
+    html2canvas(element).then(function (canvas) {
+        var myImage = canvas.toDataURL();
+        downloadURI(myImage, "rapport_lbdn.png");
+    });
+    
+}

@@ -1,4 +1,10 @@
 <section class="rapport-section">
+    <div id=rapport-container>
+        <textarea placeholder="Lieu&#10Date&#10Grade&#10Nom Prénom" class=nom-prenom value="nom / prénom"></textarea>
+        <textarea class=contenu value="contenu du rapport"></textarea>
+        <textarea class=titre value="contenu du rapport"></textarea>
+
+    </div>
     <div class="element-div rapport">
         <div class="top-left">
             <div class="dropdown">
@@ -11,7 +17,7 @@
                     <button class="rapport-us">Rapport&nbspaméricain</button>
                 </div>
             </div>
-            <button id=download onclick=DownloadAsImage()></button>
+            <button id=download onclick=DownloadAsImage2()></button>
         </div>
     </div>
     <div class="element-div form">
