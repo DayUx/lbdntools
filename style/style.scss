@@ -374,6 +374,31 @@ div.tank {
     background-size: cover;
 }
 
+
+div.mortarStart {
+    background: url("../img/mortarStart.png");
+    background-size: cover;
+    top:50%;
+    left:40%;
+}
+
+
+div.mortarEnd {
+    background: url("../img/mortarEnd.png");
+    background-size: cover;
+    top:50%;
+    left:60%;
+}
+
+div#line{
+    pointer-events: none;
+
+    position:absolute;
+    width:5px;
+    margin-top:-1px;
+    background-color:getColor(first);
+}
+
 div.draggable:hover {
     cursor: move;
 }
@@ -712,7 +737,10 @@ iframe {
 
 
 
-
+#mortar-map-container{
+    width : calc(100vw - 70px);
+    overflow: scroll;
+}
 
 
 
@@ -722,4 +750,11 @@ iframe {
     position: relative;
     display: flex;
     justify-content: space-between;
+}
+
+#infos-mortier{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
 }

@@ -241,3 +241,13 @@ function Rapport( nameOfClass){
     console.log(obj);
     
 }
+
+
+
+
+
+
+
+
+
+
