@@ -1,5 +1,5 @@
 <section class="rapport-section">
-    <div id=rapport-container class="all">
+    <div id=rapport-container class="us">
         <textarea placeholder="Lieu&#10Date&#10Grade&#10Nom Prénom" class=nom-prenom ></textarea>
         <textarea placeholder="Rapport" class=contenu ></textarea>
         <textarea class=titre placeholder="Titre"></textarea>

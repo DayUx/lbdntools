@@ -647,9 +647,9 @@ iframe {
     margin-left: 50%;
     transform: translate(-50%);
     position: absolute;
-    background-image: url(../img/rapport_allemand.png);
+    background-image: url(../img/rapport_us.jpg);
     background-size: cover;
-    width: calc(141.4vh);
+    width: calc(100vh/6*5);
     height: calc(100vh);
 
 
@@ -664,40 +664,40 @@ iframe {
 
         &.contenu {
             position: absolute;
-            left: 0;
+            right: 0;
             bottom: 0;
-            height: 75%;
-            width: 30.7%;
+            height: 62.5%;
+            width: 58.5%;
         }
         &.nom-prenom {
             position: absolute;
-            right: 0;
-            bottom: 43%;
-            height: 32%;
-            width: 46.9%;
-            font-size: 5vh;
+            left: 0;
+            top: 20.5%;
+            height: 16.6%;
+            width: 41%;
+            font-size: 3vh;
         }
         &.titre{
             position: absolute;
-            right:18.4%;
+            right:0%;
             top: 0;
-            height: 24.5%;
-            width: 55%;
+            height: 20%;
+            width: 74.2%;
             font-size: 6vh;
         }
         &.regiment{
             position: absolute;
-            right:0;
-            bottom: 0;
-            height: 43%;
-            width: 29.2%;
+            left: 41.5%;
+            top: 20.5%;
+            height: 16.6%;
+            width: 38.5%;
         }
         &.inventaire{
             position: absolute;
-            right:29.5%;
+            left:0%;
             bottom: 0;
-            height: 43%;
-            width: 39.7%;
+            height: 62.5%;
+            width: 41%;
         }
 
         &:hover {

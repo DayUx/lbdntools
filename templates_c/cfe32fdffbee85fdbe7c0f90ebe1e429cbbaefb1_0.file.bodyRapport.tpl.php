@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.38, created on 2021-03-03 17:52:08
+/* Smarty version 3.1.38, created on 2021-03-03 18:02:07
   from 'D:\laragon\www\lbdntools\templates\bodyRapport.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.38',
-  'unifunc' => 'content_603fccc8dcd204_58984910',
+  'unifunc' => 'content_603fcf1ff3b710_15668200',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cfe32fdffbee85fdbe7c0f90ebe1e429cbbaefb1' => 
     array (
       0 => 'D:\\laragon\\www\\lbdntools\\templates\\bodyRapport.tpl',
-      1 => 1614793660,
+      1 => 1614794525,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_603fccc8dcd204_58984910 (Smarty_Internal_Template $_smarty_tpl) {
+function content_603fcf1ff3b710_15668200 (Smarty_Internal_Template $_smarty_tpl) {
 ?><section class="rapport-section">
-    <div id=rapport-container class="all">
+    <div id=rapport-container class="us">
         <textarea placeholder="Lieu&#10Date&#10Grade&#10Nom Prénom" class=nom-prenom ></textarea>
         <textarea placeholder="Rapport" class=contenu ></textarea>
         <textarea class=titre placeholder="Titre"></textarea>
