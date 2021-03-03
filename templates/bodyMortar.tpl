@@ -41,7 +41,10 @@
 
             var angleDeg = Math.atan2(fT - tT, fL - tL) * 180 / Math.PI + 180;
             var dist = Math.sqrt((fL-tL)*(fL-tL) + (fT - tT)*(fT - tT));
-            var infos = angleDeg + " degrés, " + dist + " mètres";
+            var calculDeLaMort =90 - (0.5 * Math.asin((9.81*dist)/(60*60))) * 180 / Math.PI;
+            var infos = angleDeg + " degrés Z, " + dist + " mètres, " + calculDeLaMort + " degrés X";
+
+
             document.getElementById("infos-mortier").innerHTML=infos; 
 
 

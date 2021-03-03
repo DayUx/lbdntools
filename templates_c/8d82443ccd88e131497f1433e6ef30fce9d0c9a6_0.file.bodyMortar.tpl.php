@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.38, created on 2021-03-03 22:18:27
+/* Smarty version 3.1.38, created on 2021-03-03 22:42:56
   from 'D:\laragon\www\lbdntools\templates\bodyMortar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.38',
-  'unifunc' => 'content_60400b33e051a3_53659494',
+  'unifunc' => 'content_604010f0d763f4_02659714',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8d82443ccd88e131497f1433e6ef30fce9d0c9a6' => 
     array (
       0 => 'D:\\laragon\\www\\lbdntools\\templates\\bodyMortar.tpl',
-      1 => 1614809904,
+      1 => 1614811373,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60400b33e051a3_53659494 (Smarty_Internal_Template $_smarty_tpl) {
+function content_604010f0d763f4_02659714 (Smarty_Internal_Template $_smarty_tpl) {
 ?><section class="mortar-section">
     <div id="nameOfElement"></div>
     <div class=container>
@@ -65,7 +65,10 @@ function content_60400b33e051a3_53659494 (Smarty_Internal_Template $_smarty_tpl)
 
             var angleDeg = Math.atan2(fT - tT, fL - tL) * 180 / Math.PI + 180;
             var dist = Math.sqrt((fL-tL)*(fL-tL) + (fT - tT)*(fT - tT));
-            var infos = angleDeg + " degrés, " + dist + " mètres";
+            var calculDeLaMort =90 - (0.5 * Math.asin((9.81*dist)/(60*60))) * 180 / Math.PI;
+            var infos = angleDeg + " degrés Z, " + dist + " mètres, " + calculDeLaMort + " degrés X";
+
+
             document.getElementById("infos-mortier").innerHTML=infos; 
 
 
