@@ -231,3 +231,13 @@ function DownloadAsImage2() {
     });
     
 }
+
+
+function Rapport( nameOfClass){
+    console.log(document.getElementsByClassName(nameOfClass));
+    var obj = document.getElementById('rapport-container');
+    console.log(nameOfClass);
+    obj.className = nameOfClass;
+    console.log(obj);
+    
+}

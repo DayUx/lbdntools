@@ -1,5 +1,5 @@
 <section class="rapport-section">
-    <div id=rapport-container>
+    <div id=rapport-container class="all">
         <textarea placeholder="Lieu&#10Date&#10Grade&#10Nom Prénom" class=nom-prenom ></textarea>
         <textarea placeholder="Rapport" class=contenu ></textarea>
         <textarea class=titre placeholder="Titre"></textarea>
@@ -15,8 +15,8 @@
                     <span><img src="img/arrow-down-filled-triangle.svg"></span>
                 </div>
                 <div class="dropdown-content">
-                    <button class="rapport-all">Rapport&nbspallemand</button>
-                    <button class="rapport-us">Rapport&nbspaméricain</button>
+                    <button onclick="Rapport('all')" class="rapport-all">Rapport&nbspallemand</button>
+                    <button onclick="Rapport('us')" class="rapport-us">Rapport&nbspaméricain</button>
                 </div>
             </div>
             <button id=download onclick=DownloadAsImage2()></button>

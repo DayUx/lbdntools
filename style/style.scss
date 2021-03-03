@@ -572,22 +572,12 @@ iframe {
 
 #previewImage {}
 
-#rapport-container textarea {
-    background: transparent;
-    border: none;
-    font-size: 3vh;
-    font-family: "TTypeWriter";
-    resize: none;
-}
-
-#rapport-container textarea:hover {
-    -webkit-box-shadow: 0px 0px 2px 3px var(--color-second);
-    -moz-box-shadow: 0px 0px 2px 3px var(--color-second);
-    box-shadow: 0px 0px 2px 3px var(--color-second);
-}
 
 
-#rapport-container {
+
+
+
+#rapport-container.all {
     margin-left: 50%;
     transform: translate(-50%);
     position: absolute;
@@ -595,48 +585,138 @@ iframe {
     background-size: cover;
     width: calc(141.4vh);
     height: calc(100vh);
+
+
+    textarea {
+        background: transparent;
+        border: none;
+        font-size: 3vh;
+        font-family: "TTypeWriter";
+        resize: none;
+        
+
+
+        &.contenu {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 75%;
+            width: 30.7%;
+        }
+        &.nom-prenom {
+            position: absolute;
+            right: 0;
+            bottom: 43%;
+            height: 32%;
+            width: 46.9%;
+            font-size: 5vh;
+        }
+        &.titre{
+            position: absolute;
+            right:18.4%;
+            top: 0;
+            height: 24.5%;
+            width: 55%;
+            font-size: 6vh;
+        }
+        &.regiment{
+            position: absolute;
+            right:0;
+            bottom: 0;
+            height: 43%;
+            width: 29.2%;
+        }
+        &.inventaire{
+            position: absolute;
+            right:29.5%;
+            bottom: 0;
+            height: 43%;
+            width: 39.7%;
+        }
+
+        &:hover {
+            -webkit-box-shadow: 0px 0px 2px 3px var(--color-second);
+            -moz-box-shadow: 0px 0px 2px 3px var(--color-second);
+            box-shadow: 0px 0px 2px 3px var(--color-second);
+        }
+    }
 }
 
-#rapport-container textarea.contenu {
+
+#rapport-container.us {
+    margin-left: 50%;
+    transform: translate(-50%);
     position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 75%;
-    width: 30.7%;
+    background-image: url(../img/rapport_allemand.png);
+    background-size: cover;
+    width: calc(141.4vh);
+    height: calc(100vh);
+
+
+    textarea {
+        background: transparent;
+        border: none;
+        font-size: 3vh;
+        font-family: "TTypeWriter";
+        resize: none;
+        
+
+
+        &.contenu {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 75%;
+            width: 30.7%;
+        }
+        &.nom-prenom {
+            position: absolute;
+            right: 0;
+            bottom: 43%;
+            height: 32%;
+            width: 46.9%;
+            font-size: 5vh;
+        }
+        &.titre{
+            position: absolute;
+            right:18.4%;
+            top: 0;
+            height: 24.5%;
+            width: 55%;
+            font-size: 6vh;
+        }
+        &.regiment{
+            position: absolute;
+            right:0;
+            bottom: 0;
+            height: 43%;
+            width: 29.2%;
+        }
+        &.inventaire{
+            position: absolute;
+            right:29.5%;
+            bottom: 0;
+            height: 43%;
+            width: 39.7%;
+        }
+
+        &:hover {
+            -webkit-box-shadow: 0px 0px 2px 3px var(--color-second);
+            -moz-box-shadow: 0px 0px 2px 3px var(--color-second);
+            box-shadow: 0px 0px 2px 3px var(--color-second);
+        }
+    }
 }
 
-#rapport-container textarea.nom-prenom {
-    position: absolute;
-    right: 0;
-    bottom: 43%;
-    height: 32%;
-    width: 46.9%;
-    font-size: 5vh;
-}
 
-#rapport-container textarea.titre{
-    position: absolute;
-    right:18.4%;
-    top: 0;
-    height: 24.5%;
-    width: 55%;
-    font-size: 6vh;
-}
-#rapport-container textarea.regiment{
-    position: absolute;
-    right:0;
-    bottom: 0;
-    height: 43%;
-    width: 29.2%;
-}
-  
-#rapport-container textarea.inventaire{
-    position: absolute;
-    right:29.5%;
-    bottom: 0;
-    height: 43%;
-    width: 39.7%;
-}
+
+
+
+
+
+
+
+
 .container {
     width: calc(100vw - 70px);
     height: 100%;
