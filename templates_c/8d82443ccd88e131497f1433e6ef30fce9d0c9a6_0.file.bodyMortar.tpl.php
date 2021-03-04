@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.38, created on 2021-03-04 10:17:45
+/* Smarty version 3.1.38, created on 2021-03-04 17:28:36
   from 'D:\laragon\www\lbdntools\templates\bodyMortar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.38',
-  'unifunc' => 'content_6040b3c9d98273_24583999',
+  'unifunc' => 'content_604118c4107992_78436552',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8d82443ccd88e131497f1433e6ef30fce9d0c9a6' => 
     array (
       0 => 'D:\\laragon\\www\\lbdntools\\templates\\bodyMortar.tpl',
-      1 => 1614853060,
+      1 => 1614878906,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6040b3c9d98273_24583999 (Smarty_Internal_Template $_smarty_tpl) {
+function content_604118c4107992_78436552 (Smarty_Internal_Template $_smarty_tpl) {
 ?><section class="mortar-section">
     <div id="nameOfElement"></div>
     <div class=container>
@@ -45,9 +45,10 @@ function content_6040b3c9d98273_24583999 (Smarty_Internal_Template $_smarty_tpl)
                 <button class=frame onclick="dezoom()">-</button><button class=frame onclick="zoom()">+</button>
             </div>
             <div id=map class="6.6325">
-                <div id="line"></div>
+                <div id="infos"></div>
+                <div class="mortarEnd" id="mortarEnd"></div>
                 <div class="draggable mortarStart" id="mortarStart"></div>
-                <div class="draggable mortarEnd" id="mortarEnd"></div>
+                
                 
             </div>
         </div>
@@ -56,65 +57,29 @@ function content_6040b3c9d98273_24583999 (Smarty_Internal_Template $_smarty_tpl)
 >
         
 
-        function adjustLine(from, to, line){
+        function adjustLine(from, line){
             var mapSize = parseFloat(document.getElementById("map").classList[0]);
 
 
             var fT = from.offsetTop;
-            var tT = to.offsetTop;
             var fL = from.offsetLeft;
-            var tL = to.offsetLeft;
 
-            var angleDeg = Math.atan2(fT - tT, fL - tL) * 180 / Math.PI + 180;
-            var dist = Math.sqrt((fL-tL)*(fL-tL) + (fT - tT)*(fT - tT));
-
-
-            dist = dist/(document.getElementById("map").clientWidth/100) * mapSize;
-            var calculDeLaMort =90 - (0.5 * Math.asin((9.81*dist)/(60*60))) * 180 / Math.PI;
-            var infos = angleDeg + " degrés Z, " + dist + " mètres, " + calculDeLaMort + " degrés X";
-
-
-            document.getElementById("infos-mortier").innerHTML=infos; 
-
-
-
-            console.log(angleDeg + " deg");
-            console.log(dist + " px de distance");
             
-            var CA   = Math.abs(tT - fT);
-            var CO   = Math.abs(tL - fL);
-            var H    = Math.sqrt(CA*CA + CO*CO);
-            var ANG  = 180 / Math.PI * Math.acos( CA/H );
-
-            if(tT > fT){
-                var top  = (tT-fT)/2 + fT;
-            }else{
-                var top  = (fT-tT)/2 + tT;
-            }
-            if(tL > fL){
-                var left = (tL-fL)/2 + fL;
-            }else{
-                var left = (fL-tL)/2 + tL;
-            }
-
-            if(( fT < tT && fL < tL) || ( tT < fT && tL < fL) || (fT > tT && fL > tL) || (tT > fT && tL > fL)){
-                ANG *= -1;
-            }
-            top-= H/2;
-
-            line.style["-webkit-transform"] = 'rotate('+ ANG +'deg)';
-            line.style["-moz-transform"] = 'rotate('+ ANG +'deg)';
-            line.style["-ms-transform"] = 'rotate('+ ANG +'deg)';
-            line.style["-o-transform"] = 'rotate('+ ANG +'deg)';
-            line.style["-transform"] = 'rotate('+ ANG +'deg)';
+            var dist = 50*50/8.91*Math.sin(2*(45 * Math.PI/180));
+            console.log(dist + "m");
+            dist = dist / mapSize ;
+            console.log(dist + "%");
 
 
-            top = top/(document.getElementById("map").clientWidth/100)
-            left = left/(document.getElementById("map").clientWidth/100)
-            H = H/(document.getElementById("map").clientWidth/100)
-            line.style.top    = top+'%';
-            line.style.left   = left+'%';
-            line.style.height = H + '%';
+
+
+
+
+            
+            line.style.top    = fT+'px';
+            line.style.left   = fL+'px';
+            line.style.height   = dist * 2 +'%';
+            line.style.width   = dist * 2 +'%';
         }
 
 
@@ -124,8 +89,7 @@ function content_6040b3c9d98273_24583999 (Smarty_Internal_Template $_smarty_tpl)
         function refresh(){
             adjustLine(
                 document.getElementById('mortarStart'), 
-                document.getElementById('mortarEnd'),
-                document.getElementById('line')
+                document.getElementById('mortarEnd')
             );
         }
 

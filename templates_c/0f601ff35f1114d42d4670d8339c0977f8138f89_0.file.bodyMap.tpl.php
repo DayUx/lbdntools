@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.38, created on 2021-03-02 11:37:28
+/* Smarty version 3.1.38, created on 2021-03-04 16:10:36
   from 'D:\laragon\www\lbdntools\templates\bodyMap.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.38',
-  'unifunc' => 'content_603e2378d4add8_69597809',
+  'unifunc' => 'content_6041067c6537c5_36840695',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f601ff35f1114d42d4670d8339c0977f8138f89' => 
     array (
       0 => 'D:\\laragon\\www\\lbdntools\\templates\\bodyMap.tpl',
-      1 => 1614685038,
+      1 => 1614851215,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_603e2378d4add8_69597809 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6041067c6537c5_36840695 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <body>
@@ -34,9 +34,8 @@ function content_603e2378d4add8_69597809 (Smarty_Internal_Template $_smarty_tpl)
                         <span><img src="img/arrow-down-filled-triangle.svg"></span>
                     </div>
                     <div class="dropdown-content">
-                        <button onclick="map('url(img/marigny.png)')">rp_marigny</button>
-                        <button onclick="map('url(img/falaise.png)')">rnl_firyofalaise</button>
-
+                        <button onclick="map('url(img/marigny.png)',6.6325)">rp_marigny</button>
+                        <button onclick="map('url(img/falaise.png)',8.2052)">rnl_firyofalaise</button>
                     </div>
                 </div>
                 <button id=download onclick=DownloadAsImage()></button>

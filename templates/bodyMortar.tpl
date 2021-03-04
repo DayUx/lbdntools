@@ -22,9 +22,10 @@
                 <button class=frame onclick="dezoom()">-</button><button class=frame onclick="zoom()">+</button>
             </div>
             <div id=map class="6.6325">
-                <div id="line"></div>
+                <div id="infos"></div>
+                <div class="mortarEnd" id="mortarEnd"></div>
                 <div class="draggable mortarStart" id="mortarStart"></div>
-                <div class="draggable mortarEnd" id="mortarEnd"></div>
+                
                 
             </div>
         </div>
@@ -32,65 +33,29 @@
     <script>
         
 
-        function adjustLine(from, to, line){
+        function adjustLine(from, line){
             var mapSize = parseFloat(document.getElementById("map").classList[0]);
 
 
             var fT = from.offsetTop;
-            var tT = to.offsetTop;
             var fL = from.offsetLeft;
-            var tL = to.offsetLeft;
 
-            var angleDeg = Math.atan2(fT - tT, fL - tL) * 180 / Math.PI + 180;
-            var dist = Math.sqrt((fL-tL)*(fL-tL) + (fT - tT)*(fT - tT));
-
-
-            dist = dist/(document.getElementById("map").clientWidth/100) * mapSize;
-            var calculDeLaMort =90 - (0.5 * Math.asin((9.81*dist)/(60*60))) * 180 / Math.PI;
-            var infos = angleDeg + " degrés Z, " + dist + " mètres, " + calculDeLaMort + " degrés X";
-
-
-            document.getElementById("infos-mortier").innerHTML=infos; 
-
-
-
-            console.log(angleDeg + " deg");
-            console.log(dist + " px de distance");
             
-            var CA   = Math.abs(tT - fT);
-            var CO   = Math.abs(tL - fL);
-            var H    = Math.sqrt(CA*CA + CO*CO);
-            var ANG  = 180 / Math.PI * Math.acos( CA/H );
-
-            if(tT > fT){
-                var top  = (tT-fT)/2 + fT;
-            }else{
-                var top  = (fT-tT)/2 + tT;
-            }
-            if(tL > fL){
-                var left = (tL-fL)/2 + fL;
-            }else{
-                var left = (fL-tL)/2 + tL;
-            }
-
-            if(( fT < tT && fL < tL) || ( tT < fT && tL < fL) || (fT > tT && fL > tL) || (tT > fT && tL > fL)){
-                ANG *= -1;
-            }
-            top-= H/2;
-
-            line.style["-webkit-transform"] = 'rotate('+ ANG +'deg)';
-            line.style["-moz-transform"] = 'rotate('+ ANG +'deg)';
-            line.style["-ms-transform"] = 'rotate('+ ANG +'deg)';
-            line.style["-o-transform"] = 'rotate('+ ANG +'deg)';
-            line.style["-transform"] = 'rotate('+ ANG +'deg)';
+            var dist = 50*50/8.91*Math.sin(2*(45 * Math.PI/180));
+            console.log(dist + "m");
+            dist = dist / mapSize ;
+            console.log(dist + "%");
 
 
-            top = top/(document.getElementById("map").clientWidth/100)
-            left = left/(document.getElementById("map").clientWidth/100)
-            H = H/(document.getElementById("map").clientWidth/100)
-            line.style.top    = top+'%';
-            line.style.left   = left+'%';
-            line.style.height = H + '%';
+
+
+
+
+            
+            line.style.top    = fT+'px';
+            line.style.left   = fL+'px';
+            line.style.height   = dist * 2 +'%';
+            line.style.width   = dist * 2 +'%';
         }
 
 
@@ -100,8 +65,7 @@
         function refresh(){
             adjustLine(
                 document.getElementById('mortarStart'), 
-                document.getElementById('mortarEnd'),
-                document.getElementById('line')
+                document.getElementById('mortarEnd')
             );
         }
 

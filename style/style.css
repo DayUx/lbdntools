@@ -386,10 +386,12 @@ div.mortarStart {
 }
 
 div.mortarEnd {
-  background: url("../img/mortarEnd.png");
+  background: url("../img/infosMortier.svg");
+  position: absolute;
   background-size: cover;
   top: 50%;
   left: 60%;
+  transform: translate(-50%, -50%);
 }
 
 div#line {
