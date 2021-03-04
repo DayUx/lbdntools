@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.38, created on 2021-03-03 22:42:56
+/* Smarty version 3.1.38, created on 2021-03-04 10:17:45
   from 'D:\laragon\www\lbdntools\templates\bodyMortar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.38',
-  'unifunc' => 'content_604010f0d763f4_02659714',
+  'unifunc' => 'content_6040b3c9d98273_24583999',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8d82443ccd88e131497f1433e6ef30fce9d0c9a6' => 
     array (
       0 => 'D:\\laragon\\www\\lbdntools\\templates\\bodyMortar.tpl',
-      1 => 1614811373,
+      1 => 1614853060,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_604010f0d763f4_02659714 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6040b3c9d98273_24583999 (Smarty_Internal_Template $_smarty_tpl) {
 ?><section class="mortar-section">
     <div id="nameOfElement"></div>
     <div class=container>
@@ -33,8 +33,8 @@ function content_604010f0d763f4_02659714 (Smarty_Internal_Template $_smarty_tpl)
                         <span><img src="img/arrow-down-filled-triangle.svg"></span>
                     </div>
                     <div class="dropdown-content">
-                        <button onmouseover="refresh()" onclick="map('url(img/marigny.png)')">rp_marigny</button>
-                        <button onmouseover="refresh()" onclick="map('url(img/falaise.png)')">rnl_firyofalaise</button>
+                        <button onclick="map('url(img/marigny.png)',6.6325)">rp_marigny</button>
+                        <button onclick="map('url(img/falaise.png)',8.2052)">rnl_firyofalaise</button>
 
                     </div>
                 </div>
@@ -44,7 +44,7 @@ function content_604010f0d763f4_02659714 (Smarty_Internal_Template $_smarty_tpl)
             <div class=zoom>
                 <button class=frame onclick="dezoom()">-</button><button class=frame onclick="zoom()">+</button>
             </div>
-            <div id=map>
+            <div id=map class="6.6325">
                 <div id="line"></div>
                 <div class="draggable mortarStart" id="mortarStart"></div>
                 <div class="draggable mortarEnd" id="mortarEnd"></div>
@@ -52,11 +52,13 @@ function content_604010f0d763f4_02659714 (Smarty_Internal_Template $_smarty_tpl)
             </div>
         </div>
     </div>
-
     <?php echo '<script'; ?>
 >
+        
 
         function adjustLine(from, to, line){
+            var mapSize = parseFloat(document.getElementById("map").classList[0]);
+
 
             var fT = from.offsetTop;
             var tT = to.offsetTop;
@@ -65,6 +67,9 @@ function content_604010f0d763f4_02659714 (Smarty_Internal_Template $_smarty_tpl)
 
             var angleDeg = Math.atan2(fT - tT, fL - tL) * 180 / Math.PI + 180;
             var dist = Math.sqrt((fL-tL)*(fL-tL) + (fT - tT)*(fT - tT));
+
+
+            dist = dist/(document.getElementById("map").clientWidth/100) * mapSize;
             var calculDeLaMort =90 - (0.5 * Math.asin((9.81*dist)/(60*60))) * 180 / Math.PI;
             var infos = angleDeg + " degrés Z, " + dist + " mètres, " + calculDeLaMort + " degrés X";
 
@@ -102,9 +107,14 @@ function content_604010f0d763f4_02659714 (Smarty_Internal_Template $_smarty_tpl)
             line.style["-ms-transform"] = 'rotate('+ ANG +'deg)';
             line.style["-o-transform"] = 'rotate('+ ANG +'deg)';
             line.style["-transform"] = 'rotate('+ ANG +'deg)';
-            line.style.top    = top+'px';
-            line.style.left   = left+'px';
-            line.style.height = H + 'px';
+
+
+            top = top/(document.getElementById("map").clientWidth/100)
+            left = left/(document.getElementById("map").clientWidth/100)
+            H = H/(document.getElementById("map").clientWidth/100)
+            line.style.top    = top+'%';
+            line.style.left   = left+'%';
+            line.style.height = H + '%';
         }
 
 

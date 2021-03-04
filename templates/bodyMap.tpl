@@ -11,9 +11,8 @@
                         <span><img src="img/arrow-down-filled-triangle.svg"></span>
                     </div>
                     <div class="dropdown-content">
-                        <button onclick="map('url(img/marigny.png)')">rp_marigny</button>
-                        <button onclick="map('url(img/falaise.png)')">rnl_firyofalaise</button>
-
+                        <button onclick="map('url(img/marigny.png)',6.6325)">rp_marigny</button>
+                        <button onclick="map('url(img/falaise.png)',8.2052)">rnl_firyofalaise</button>
                     </div>
                 </div>
                 <button id=download onclick=DownloadAsImage()></button>

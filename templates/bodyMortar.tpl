@@ -10,8 +10,8 @@
                         <span><img src="img/arrow-down-filled-triangle.svg"></span>
                     </div>
                     <div class="dropdown-content">
-                        <button onmouseover="refresh()" onclick="map('url(img/marigny.png)')">rp_marigny</button>
-                        <button onmouseover="refresh()" onclick="map('url(img/falaise.png)')">rnl_firyofalaise</button>
+                        <button onclick="map('url(img/marigny.png)',6.6325)">rp_marigny</button>
+                        <button onclick="map('url(img/falaise.png)',8.2052)">rnl_firyofalaise</button>
 
                     </div>
                 </div>
@@ -21,7 +21,7 @@
             <div class=zoom>
                 <button class=frame onclick="dezoom()">-</button><button class=frame onclick="zoom()">+</button>
             </div>
-            <div id=map>
+            <div id=map class="6.6325">
                 <div id="line"></div>
                 <div class="draggable mortarStart" id="mortarStart"></div>
                 <div class="draggable mortarEnd" id="mortarEnd"></div>
@@ -29,10 +29,12 @@
             </div>
         </div>
     </div>
-
     <script>
+        
 
         function adjustLine(from, to, line){
+            var mapSize = parseFloat(document.getElementById("map").classList[0]);
+
 
             var fT = from.offsetTop;
             var tT = to.offsetTop;
@@ -41,6 +43,9 @@
 
             var angleDeg = Math.atan2(fT - tT, fL - tL) * 180 / Math.PI + 180;
             var dist = Math.sqrt((fL-tL)*(fL-tL) + (fT - tT)*(fT - tT));
+
+
+            dist = dist/(document.getElementById("map").clientWidth/100) * mapSize;
             var calculDeLaMort =90 - (0.5 * Math.asin((9.81*dist)/(60*60))) * 180 / Math.PI;
             var infos = angleDeg + " degrés Z, " + dist + " mètres, " + calculDeLaMort + " degrés X";
 
@@ -78,9 +83,14 @@
             line.style["-ms-transform"] = 'rotate('+ ANG +'deg)';
             line.style["-o-transform"] = 'rotate('+ ANG +'deg)';
             line.style["-transform"] = 'rotate('+ ANG +'deg)';
-            line.style.top    = top+'px';
-            line.style.left   = left+'px';
-            line.style.height = H + 'px';
+
+
+            top = top/(document.getElementById("map").clientWidth/100)
+            left = left/(document.getElementById("map").clientWidth/100)
+            H = H/(document.getElementById("map").clientWidth/100)
+            line.style.top    = top+'%';
+            line.style.left   = left+'%';
+            line.style.height = H + '%';
         }
 
 

@@ -1,6 +1,7 @@
 "use strict";
 
 var pointID = 0;
+var mapSize = 6.6325;
 
 function choose(choice) {
   $(document).ready(function () {
@@ -12,7 +13,10 @@ $(document).ready(function () {
   $('#content').load('accueil.html');
 });
 
-function map(choice) {
+function map(choice, size) {
+  mapSize = size;
+  console.log(size);
+  document.getElementById('map').className = size + '';
   $('#map').css('background-image', choice);
 }
 
