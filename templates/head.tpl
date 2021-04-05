@@ -11,7 +11,7 @@
     <meta property="og:site_name" content="NormandyRP" />
     <meta data-n-head="ssr" data-hid="twitter:image" name="twitter:image" content="https://firyo.mtxserv.com/loading_lbdn/images/favicon.png">
 
-    <title>NormandyRP Tools</title>
+    <title>{$title}</title>
 
     <link rel="shortcut icon" href="img/logoNRp.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800;display=swap" rel="stylesheet">

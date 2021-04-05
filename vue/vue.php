@@ -20,7 +20,7 @@
         }
 
         protected function showHead() {
-            //$this->getSmarty()->assign("title", $this->getTitle());
+            $this->getSmarty()->assign("title", $this->getTitle());
 
             $this->getSmarty()->display("../templates/head.tpl");
         }

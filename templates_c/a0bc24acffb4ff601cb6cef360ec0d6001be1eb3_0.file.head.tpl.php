@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.38, created on 2021-03-01 17:26:15
+/* Smarty version 3.1.38, created on 2021-04-05 14:33:50
   from 'D:\Programmes\laragon\www\lbdntools\templates\head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.38',
-  'unifunc' => 'content_603d23b7a130d6_96470652',
+  'unifunc' => 'content_606b1fceef8073_74032518',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a0bc24acffb4ff601cb6cef360ec0d6001be1eb3' => 
     array (
       0 => 'D:\\Programmes\\laragon\\www\\lbdntools\\templates\\head.tpl',
-      1 => 1614596258,
+      1 => 1617633224,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_603d23b7a130d6_96470652 (Smarty_Internal_Template $_smarty_tpl) {
+function content_606b1fceef8073_74032518 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -34,7 +34,8 @@ function content_603d23b7a130d6_96470652 (Smarty_Internal_Template $_smarty_tpl)
     <meta property="og:site_name" content="NormandyRP" />
     <meta data-n-head="ssr" data-hid="twitter:image" name="twitter:image" content="https://firyo.mtxserv.com/loading_lbdn/images/favicon.png">
 
-    <title>NormandyRP Tools</title>
+    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+</title>
 
     <link rel="shortcut icon" href="img/logoNRp.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800;display=swap" rel="stylesheet">
